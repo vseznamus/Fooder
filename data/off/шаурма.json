@@ -1,0 +1,46 @@
+{
+ "query": "шаурма",
+ "url": "https://search.openfoodfacts.org/search?q=%D1%88%D0%B0%D1%83%D1%80%D0%BC%D0%B0+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 5,
+ "products": [
+  {
+   "code": "4607968571120",
+   "name": "Шаурма с курицей",
+   "brands": "Рестория ШЕФ",
+   "quantity": "200 г",
+   "scans": 1,
+   "kcal": 180,
+   "protein": 8.5,
+   "fat": 6,
+   "carbs": 22,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "2101815000013",
+   "name": "Шаурма с курицей оригинальная",
+   "brands": "Лавка",
+   "quantity": null,
+   "scans": null,
+   "kcal": 203.1,
+   "protein": 6.3,
+   "fat": 11.9,
+   "carbs": 17.7,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "2100100572730",
+   "name": "Шаурма с курицей",
+   "brands": "ВкусВилл",
+   "quantity": null,
+   "scans": null,
+   "kcal": 230.9,
+   "protein": 7.8,
+   "fat": 12.9,
+   "carbs": 20.9,
+   "fiber": null,
+   "sugar": null
+  }
+ ]
+}
