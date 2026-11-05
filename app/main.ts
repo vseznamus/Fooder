@@ -20,7 +20,7 @@ import {
   type Nutrients,
 } from './lib.ts';
 import { addDays, dateOf } from '../src/time.ts';
-import { CATEGORY_LABELS } from './catalog.ts';
+import { CATEGORY_LABELS, SOURCES, sourceText, type CatalogProduct } from './catalog.ts';
 import { catalogOf, DEFAULT_GOALS, load, newId, save, type AppState, type StoredEntry } from './store.ts';
 import { demoHistory } from './demo.ts';
 
@@ -187,6 +187,7 @@ function portionSheet(product: Product, meal: MealType, entry?: StoredEntry): vo
       null,
       h('h2', null, productTitle(product)),
       h('p', { class: 'muted' }, `на 100 г: ${kcalOf(product.per100)} · ${bju(product.per100)}`),
+      sourceLine(product as CatalogProduct),
       h('div', { class: 'chips' }, chips),
       h('label', { class: 'grams' }, input, h('span', null, 'г')),
       preview,
@@ -216,6 +217,12 @@ function portionSheet(product: Product, meal: MealType, entry?: StoredEntry): vo
       ),
     );
   });
+}
+
+function sourceLine(p: CatalogProduct): HTMLElement {
+  const text = sourceText(p);
+  const url = p.source?.url;
+  return h('p', { class: 'source tiny muted' }, 'Источник: ', url ? h('a', { href: url, target: '_blank', rel: 'noopener' }, text) : text);
 }
 
 function customProductSheet(name: string, meal: MealType): void {
@@ -535,7 +542,13 @@ function settingsView(): HTMLElement {
             commit((s) => (s.entries = []));
           },
         }, 'Удалить все записи'))),
-    h('p', { class: 'muted tiny center' }, 'Fooder 0.1'));
+    h('section', { class: 'card' },
+      h('h3', null, 'Откуда цифры'),
+      h('p', { class: 'small' }, 'Пищевая ценность каждого продукта взята из первичного источника — он указан на экране продукта.'),
+      h('p', { class: 'small muted' }, h('b', null, 'USDA FoodData Central'), ' (Министерство сельского хозяйства США, общественное достояние) — базовые продукты и блюда.'),
+      h('p', { class: 'small muted' }, h('b', null, 'Open Food Facts'), ' (лицензия ODbL) — российские продукты: медиана данных с этикеток нескольких производителей.'),
+      h('p', { class: 'tiny muted' }, SOURCES.usda.slice(1).join(' · '))),
+    h('p', { class: 'muted tiny center' }, 'Fooder 0.2'));
 }
 
 // ---------------------------------------------------------------------------

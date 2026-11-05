@@ -1,0 +1,2745 @@
+{
+ "_doc": "Сгенерировано scripts/build-catalog.mjs из data/. Не редактировать вручную.",
+ "sources": {
+  "usda": [
+   "USDA FoodData Central (public domain, CC0): https://fdc.nal.usda.gov/",
+   "Downloaded 2026-11-05T19:00:44+00:00",
+   "sr_legacy: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+   "fndds: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_survey_food_csv_2024-10-31.zip"
+  ],
+  "off": "Open Food Facts (ODbL), https://world.openfoodfacts.org — медиана этикеток российских товаров"
+ },
+ "products": [
+  {
+   "id": "tvorog0",
+   "name": "Творог нежирный (0–2 %)",
+   "category": "dairy",
+   "per100": {
+    "kcal": 79.3,
+    "protein": 17,
+    "fat": 1.8,
+    "carbs": 1.3
+   },
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 3,
+    "title": "медиана 3 этикеток",
+    "codes": [
+     "4600605029343",
+     "4810268028878",
+     "4607164992958"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4600605029343"
+   }
+  },
+  {
+   "id": "tvorog5",
+   "name": "Творог 5 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 121,
+    "protein": 16,
+    "fat": 5,
+    "carbs": 3
+   },
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 4,
+    "title": "медиана 4 этикеток",
+    "codes": [
+     "4606038066283",
+     "4607025850809",
+     "4607078113494",
+     "4610030032894"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4606038066283"
+   }
+  },
+  {
+   "id": "tvorog9",
+   "name": "Творог 9 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 157,
+    "protein": 16,
+    "fat": 9,
+    "carbs": 3
+   },
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 9,
+    "title": "медиана 9 этикеток",
+    "codes": [
+     "4631142658208",
+     "4690469005607",
+     "4607003720506",
+     "4600653110710",
+     "4602048007759",
+     "4602014004683",
+     "4602048008534",
+     "4640009492305",
+     "4650068130070"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4631142658208"
+   }
+  },
+  {
+   "id": "milk",
+   "name": "Молоко 2,5 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 53,
+    "protein": 3,
+    "fat": 2.5,
+    "carbs": 4.7
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 5,
+    "title": "медиана 5 этикеток",
+    "codes": [
+     "4820222760249",
+     "4601390000395",
+     "4690228027192",
+     "4602358008422",
+     "4607006112575"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4820222760249"
+   }
+  },
+  {
+   "id": "milk32",
+   "name": "Молоко 3,2 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 60,
+    "protein": 3,
+    "fat": 3.2,
+    "carbs": 4.7
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 3,
+    "title": "медиана 3 этикеток",
+    "codes": [
+     "4640017350536",
+     "4680014500350",
+     "4602048004109"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4640017350536"
+   }
+  },
+  {
+   "id": "kefir1",
+   "name": "Кефир 1 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 37,
+    "protein": 3,
+    "fat": 1,
+    "carbs": 4
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "snack",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 5,
+    "title": "медиана 5 этикеток",
+    "codes": [
+     "4602547001289",
+     "4680017922326",
+     "4603767009772",
+     "2100100002299",
+     "4690502001238"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4602547001289"
+   }
+  },
+  {
+   "id": "kefir25",
+   "name": "Кефир 2,5 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 51,
+    "protein": 3,
+    "fat": 2.5,
+    "carbs": 4
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "snack",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 3,
+    "title": "медиана 3 этикеток",
+    "codes": [
+     "4607053473780",
+     "4600742008836",
+     "4607167840720"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4607053473780"
+   }
+  },
+  {
+   "id": "ryazhenka",
+   "name": "Ряженка 2,5–4 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 59,
+    "protein": 3,
+    "fat": 3.2,
+    "carbs": 4.2
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "snack",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 11,
+    "title": "медиана 11 этикеток",
+    "codes": [
+     "4602358000396",
+     "2100100105792",
+     "4607009782188",
+     "4607074065278",
+     "4811465002524",
+     "4607057272945",
+     "4690228105159",
+     "4607034841447",
+     "4601959005427",
+     "4603767010198",
+     "4640009498642"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4602358000396"
+   }
+  },
+  {
+   "id": "sourCream",
+   "name": "Сметана 15 %",
+   "category": "dairy",
+   "per100": {
+    "kcal": 160,
+    "protein": 2.6,
+    "fat": 15,
+    "carbs": 3.6
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 20
+    }
+   ],
+   "standalone": false,
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 6,
+    "title": "медиана 6 этикеток",
+    "codes": [
+     "4600605029275",
+     "4600742014189",
+     "4620006004824",
+     "4606419021443",
+     "4640028780919",
+     "4607055310809"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4600605029275"
+   }
+  },
+  {
+   "id": "yogurtGreek",
+   "name": "Йогурт греческий нежирный",
+   "category": "dairy",
+   "per100": {
+    "kcal": 73,
+    "protein": 9.95,
+    "fat": 1.92,
+    "carbs": 3.94,
+    "fiber": 0,
+    "sugar": 3.56
+   },
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170903,
+    "title": "Yogurt, Greek, plain, lowfat",
+    "url": "https://fdc.nal.usda.gov/food-details/170903/nutrients"
+   }
+  },
+  {
+   "id": "yogurtFruit",
+   "name": "Йогурт фруктовый нежирный",
+   "category": "dairy",
+   "per100": {
+    "kcal": 99,
+    "protein": 3.98,
+    "fat": 1.15,
+    "carbs": 18.64,
+    "fiber": 0,
+    "sugar": 18.64
+   },
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170889,
+    "title": "Yogurt, fruit, low fat,9 g protein/8 oz",
+    "url": "https://fdc.nal.usda.gov/food-details/170889/nutrients"
+   }
+  },
+  {
+   "id": "cheese",
+   "name": "Сыр полутвёрдый (типа гауды)",
+   "category": "dairy",
+   "per100": {
+    "kcal": 356,
+    "protein": 24.94,
+    "fat": 27.44,
+    "carbs": 2.22,
+    "fiber": 0,
+    "sugar": 2.22
+   },
+   "units": [
+    {
+     "label": "ломтик",
+     "forms": [
+      "ломтик",
+      "ломтика",
+      "ломтиков"
+     ],
+     "grams": 20
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171241,
+    "title": "Cheese, gouda",
+    "url": "https://fdc.nal.usda.gov/food-details/171241/nutrients"
+   }
+  },
+  {
+   "id": "mozzarella",
+   "name": "Моцарелла",
+   "category": "dairy",
+   "per100": {
+    "kcal": 299,
+    "protein": 22.17,
+    "fat": 22.14,
+    "carbs": 2.4,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170845,
+    "title": "Cheese, mozzarella, whole milk",
+    "url": "https://fdc.nal.usda.gov/food-details/170845/nutrients"
+   }
+  },
+  {
+   "id": "syrniki",
+   "name": "Сырники",
+   "category": "dairy",
+   "per100": {
+    "kcal": 237,
+    "protein": 13.3,
+    "fat": 9.7,
+    "carbs": 19.6
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 60
+    }
+   ],
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 4,
+    "title": "медиана 4 этикеток",
+    "codes": [
+     "4660124131712",
+     "4660124134942",
+     "4660019678735",
+     "4680150848422"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4660124131712"
+   }
+  },
+  {
+   "id": "syrok",
+   "name": "Сырок глазированный",
+   "category": "sweets",
+   "per100": {
+    "kcal": 381.3,
+    "protein": 8.5,
+    "fat": 23.4,
+    "carbs": 32,
+    "sugar": 27.7
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 40
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 14,
+    "title": "медиана 14 этикеток",
+    "codes": [
+     "4607016356884",
+     "4680320003910",
+     "4620038120929",
+     "4620038121018",
+     "4607016359885",
+     "4607008054941",
+     "4603974001033",
+     "4607060502442",
+     "4660043857519",
+     "4660043858806",
+     "4602014011636",
+     "4630024421480",
+     "4810268050671",
+     "4607060382419"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4607016356884"
+   }
+  },
+  {
+   "id": "egg",
+   "name": "Яйцо куриное",
+   "category": "eggs",
+   "per100": {
+    "kcal": 143,
+    "protein": 12.56,
+    "fat": 9.51,
+    "carbs": 0.72,
+    "fiber": 0,
+    "sugar": 0.37
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 50,
+     "source": "USDA: 1 large"
+    }
+   ],
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171287,
+    "title": "Egg, whole, raw, fresh",
+    "url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+   }
+  },
+  {
+   "id": "eggBoiled",
+   "name": "Яйцо варёное",
+   "category": "eggs",
+   "per100": {
+    "kcal": 155,
+    "protein": 12.58,
+    "fat": 10.61,
+    "carbs": 1.12,
+    "fiber": 0,
+    "sugar": 1.12
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 50,
+     "source": "USDA: 1 large"
+    }
+   ],
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173424,
+    "title": "Egg, whole, cooked, hard-boiled",
+    "url": "https://fdc.nal.usda.gov/food-details/173424/nutrients"
+   }
+  },
+  {
+   "id": "omelet",
+   "name": "Омлет",
+   "category": "eggs",
+   "per100": {
+    "kcal": 154,
+    "protein": 10.57,
+    "fat": 11.66,
+    "carbs": 0.64,
+    "fiber": 0,
+    "sugar": 0.31
+   },
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172185,
+    "title": "Egg, whole, cooked, omelet",
+    "url": "https://fdc.nal.usda.gov/food-details/172185/nutrients"
+   }
+  },
+  {
+   "id": "chicken",
+   "name": "Куриная грудка отварная",
+   "category": "meat",
+   "per100": {
+    "kcal": 151,
+    "protein": 28.98,
+    "fat": 3.03,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171478,
+    "title": "Chicken, broilers or fryers, breast, meat only, cooked, stewed",
+    "url": "https://fdc.nal.usda.gov/food-details/171478/nutrients"
+   }
+  },
+  {
+   "id": "chickenRoast",
+   "name": "Куриная грудка запечённая",
+   "category": "meat",
+   "per100": {
+    "kcal": 165,
+    "protein": 31.02,
+    "fat": 3.57,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171477,
+    "title": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+    "url": "https://fdc.nal.usda.gov/food-details/171477/nutrients"
+   }
+  },
+  {
+   "id": "chickenThigh",
+   "name": "Куриное бедро запечённое, без кожи",
+   "category": "meat",
+   "per100": {
+    "kcal": 179,
+    "protein": 24.76,
+    "fat": 8.15,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172388,
+    "title": "Chicken, broilers or fryers, thigh, meat only, cooked, roasted",
+    "url": "https://fdc.nal.usda.gov/food-details/172388/nutrients"
+   }
+  },
+  {
+   "id": "turkey",
+   "name": "Грудка индейки запечённая",
+   "category": "meat",
+   "per100": {
+    "kcal": 136,
+    "protein": 29.51,
+    "fat": 1.97,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 174516,
+    "title": "Turkey, retail parts, breast, meat only, cooked, roasted",
+    "url": "https://fdc.nal.usda.gov/food-details/174516/nutrients"
+   }
+  },
+  {
+   "id": "beef",
+   "name": "Говядина тушёная, постная",
+   "category": "meat",
+   "per100": {
+    "kcal": 216,
+    "protein": 30.54,
+    "fat": 10.46,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169444,
+    "title": "Beef, chuck, under blade pot roast, boneless, separable lean only, trimmed to 0\" fat, all grades, cooked, braised",
+    "url": "https://fdc.nal.usda.gov/food-details/169444/nutrients"
+   }
+  },
+  {
+   "id": "pork",
+   "name": "Свиная корейка запечённая, постная",
+   "category": "meat",
+   "per100": {
+    "kcal": 209,
+    "protein": 28.62,
+    "fat": 9.63,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 168233,
+    "title": "Pork, fresh, loin, whole, separable lean only, cooked, roasted",
+    "url": "https://fdc.nal.usda.gov/food-details/168233/nutrients"
+   }
+  },
+  {
+   "id": "cutletChicken",
+   "name": "Котлета куриная",
+   "category": "meat",
+   "per100": {
+    "kcal": 170,
+    "protein": 13,
+    "fat": 10,
+    "carbs": 6.5
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 75
+    }
+   ],
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 7,
+    "title": "медиана 7 этикеток",
+    "codes": [
+     "4630055384655",
+     "4606038086755",
+     "9960145261043",
+     "4607935570156",
+     "4607018274094",
+     "2090006047213",
+     "4640008841555"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4630055384655"
+   }
+  },
+  {
+   "id": "cutlet",
+   "name": "Котлета мясная",
+   "category": "meat",
+   "per100": {
+    "kcal": 208.3,
+    "protein": 12,
+    "fat": 14.5,
+    "carbs": 6.3
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 75
+    }
+   ],
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 8,
+    "title": "медиана 8 этикеток",
+    "codes": [
+     "4607064761098",
+     "4607064813216",
+     "4607064813285",
+     "4607064813551",
+     "4602920000243",
+     "2100100095925",
+     "4610095484775",
+     "4607046566468"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4607064761098"
+   }
+  },
+  {
+   "id": "sausages",
+   "name": "Сосиски (мясо и птица)",
+   "category": "meat",
+   "per100": {
+    "kcal": 277,
+    "protein": 9.72,
+    "fat": 24.18,
+    "carbs": 5.02,
+    "fiber": 0,
+    "sugar": 2.75
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 50
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173875,
+    "title": "Frankfurter, meat and poultry, unheated",
+    "url": "https://fdc.nal.usda.gov/food-details/173875/nutrients"
+   }
+  },
+  {
+   "id": "ham",
+   "name": "Ветчина",
+   "category": "meat",
+   "per100": {
+    "kcal": 144,
+    "protein": 17.1,
+    "fat": 5.5,
+    "carbs": 2.1
+   },
+   "units": [
+    {
+     "label": "ломтик",
+     "forms": [
+      "ломтик",
+      "ломтика",
+      "ломтиков"
+     ],
+     "grams": 20
+    }
+   ],
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 6,
+    "title": "медиана 6 этикеток",
+    "codes": [
+     "4610009511207",
+     "2100100731472",
+     "3012149003269",
+     "4630088700965",
+     "2100100834272",
+     "4680115881433"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4610009511207"
+   }
+  },
+  {
+   "id": "pelmeni",
+   "name": "Пельмени",
+   "category": "meat",
+   "per100": {
+    "kcal": 230.5,
+    "protein": 9,
+    "fat": 10.6,
+    "carbs": 26.3
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 24,
+    "title": "медиана 24 этикеток",
+    "codes": [
+     "4670002943887",
+     "4610139010359",
+     "16100834",
+     "4631140805000",
+     "4630017723713",
+     "4650068343869",
+     "2100100003548",
+     "4607111033987",
+     "4607111036889",
+     "4603421360461",
+     "4630014414034",
+     "4660004516318",
+     "4660004517025",
+     "4610083180740",
+     "2100100155582",
+     "4603421360447",
+     "4620014127614",
+     "4660004516011",
+     "4660004516868",
+     "4620119952562",
+     "4607005660022",
+     "4650068340493",
+     "4607100238980",
+     "2100100101459"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4670002943887"
+   }
+  },
+  {
+   "id": "salmon",
+   "name": "Лосось атлантический запечённый",
+   "category": "fish",
+   "per100": {
+    "kcal": 206,
+    "protein": 22.1,
+    "fat": 12.35,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 175168,
+    "title": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+    "url": "https://fdc.nal.usda.gov/food-details/175168/nutrients"
+   }
+  },
+  {
+   "id": "cod",
+   "name": "Треска запечённая",
+   "category": "fish",
+   "per100": {
+    "kcal": 105,
+    "protein": 22.83,
+    "fat": 0.86,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171956,
+    "title": "Fish, cod, Atlantic, cooked, dry heat",
+    "url": "https://fdc.nal.usda.gov/food-details/171956/nutrients"
+   }
+  },
+  {
+   "id": "tuna",
+   "name": "Тунец в собственном соку",
+   "category": "fish",
+   "per100": {
+    "kcal": 86,
+    "protein": 19.44,
+    "fat": 0.96,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173709,
+    "title": "Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",
+    "url": "https://fdc.nal.usda.gov/food-details/173709/nutrients"
+   }
+  },
+  {
+   "id": "shrimp",
+   "name": "Креветки варёные",
+   "category": "fish",
+   "per100": {
+    "kcal": 119,
+    "protein": 22.78,
+    "fat": 1.7,
+    "carbs": 1.52,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171971,
+    "title": "Crustaceans, shrimp, mixed species, cooked, moist heat (may contain additives to retain moisture)",
+    "url": "https://fdc.nal.usda.gov/food-details/171971/nutrients"
+   }
+  },
+  {
+   "id": "buckwheat",
+   "name": "Гречка варёная",
+   "category": "grains",
+   "per100": {
+    "kcal": 92,
+    "protein": 3.38,
+    "fat": 0.62,
+    "carbs": 19.94,
+    "fiber": 2.7,
+    "sugar": 0.9
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170686,
+    "title": "Buckwheat groats, roasted, cooked",
+    "url": "https://fdc.nal.usda.gov/food-details/170686/nutrients"
+   }
+  },
+  {
+   "id": "rice",
+   "name": "Рис белый варёный",
+   "category": "grains",
+   "per100": {
+    "kcal": 130,
+    "protein": 2.69,
+    "fat": 0.28,
+    "carbs": 28.17,
+    "fiber": 0.4,
+    "sugar": 0.05
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 168878,
+    "title": "Rice, white, long-grain, regular, enriched, cooked",
+    "url": "https://fdc.nal.usda.gov/food-details/168878/nutrients"
+   }
+  },
+  {
+   "id": "oatmeal",
+   "name": "Овсянка на воде",
+   "category": "grains",
+   "per100": {
+    "kcal": 71,
+    "protein": 2.54,
+    "fat": 1.52,
+    "carbs": 12,
+    "fiber": 1.7,
+    "sugar": 0.27
+   },
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173905,
+    "title": "Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/173905/nutrients"
+   }
+  },
+  {
+   "id": "pasta",
+   "name": "Макароны варёные",
+   "category": "grains",
+   "per100": {
+    "kcal": 158,
+    "protein": 5.8,
+    "fat": 0.93,
+    "carbs": 30.86,
+    "fiber": 1.8,
+    "sugar": 0.56
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169737,
+    "title": "Pasta, cooked, enriched, without added salt",
+    "url": "https://fdc.nal.usda.gov/food-details/169737/nutrients"
+   }
+  },
+  {
+   "id": "bulgur",
+   "name": "Булгур варёный",
+   "category": "grains",
+   "per100": {
+    "kcal": 83,
+    "protein": 3.08,
+    "fat": 0.24,
+    "carbs": 18.58,
+    "fiber": 4.5,
+    "sugar": 0.1
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170287,
+    "title": "Bulgur, cooked",
+    "url": "https://fdc.nal.usda.gov/food-details/170287/nutrients"
+   }
+  },
+  {
+   "id": "potato",
+   "name": "Картофель отварной",
+   "category": "grains",
+   "per100": {
+    "kcal": 86,
+    "protein": 1.71,
+    "fat": 0.1,
+    "carbs": 20.01,
+    "fiber": 1.8,
+    "sugar": 0.89
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170440,
+    "title": "Potatoes, boiled, cooked without skin, flesh, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/170440/nutrients"
+   }
+  },
+  {
+   "id": "mash",
+   "name": "Картофельное пюре с молоком и маслом",
+   "category": "grains",
+   "per100": {
+    "kcal": 113,
+    "protein": 1.86,
+    "fat": 4.22,
+    "carbs": 16.81,
+    "fiber": 1.5,
+    "sugar": 1.43
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 168555,
+    "title": "Potatoes, mashed, home-prepared, whole milk and butter added",
+    "url": "https://fdc.nal.usda.gov/food-details/168555/nutrients"
+   }
+  },
+  {
+   "id": "fries",
+   "name": "Картофель фри",
+   "category": "grains",
+   "per100": {
+    "kcal": 312,
+    "protein": 3.43,
+    "fat": 14.73,
+    "carbs": 41.44,
+    "fiber": 3.8,
+    "sugar": 0.3
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170698,
+    "title": "Fast foods, potato, french fried in vegetable oil",
+    "url": "https://fdc.nal.usda.gov/food-details/170698/nutrients"
+   }
+  },
+  {
+   "id": "granola",
+   "name": "Гранола",
+   "category": "grains",
+   "per100": {
+    "kcal": 489,
+    "protein": 13.67,
+    "fat": 24.31,
+    "carbs": 53.88,
+    "fiber": 8.9,
+    "sugar": 19.8
+   },
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171646,
+    "title": "Cereals ready-to-eat, granola, homemade",
+    "url": "https://fdc.nal.usda.gov/food-details/171646/nutrients"
+   }
+  },
+  {
+   "id": "lentils",
+   "name": "Чечевица варёная",
+   "category": "legumes",
+   "per100": {
+    "kcal": 116,
+    "protein": 9.02,
+    "fat": 0.38,
+    "carbs": 20.13,
+    "fiber": 7.9,
+    "sugar": 1.8
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172421,
+    "title": "Lentils, mature seeds, cooked, boiled, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/172421/nutrients"
+   }
+  },
+  {
+   "id": "chickpeas",
+   "name": "Нут варёный",
+   "category": "legumes",
+   "per100": {
+    "kcal": 164,
+    "protein": 8.86,
+    "fat": 2.59,
+    "carbs": 27.42,
+    "fiber": 7.6,
+    "sugar": 4.8
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173757,
+    "title": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/173757/nutrients"
+   }
+  },
+  {
+   "id": "beans",
+   "name": "Фасоль красная варёная",
+   "category": "legumes",
+   "per100": {
+    "kcal": 127,
+    "protein": 8.67,
+    "fat": 0.5,
+    "carbs": 22.8,
+    "fiber": 7.4,
+    "sugar": 0.32
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 175194,
+    "title": "Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/175194/nutrients"
+   }
+  },
+  {
+   "id": "hummus",
+   "name": "Хумус",
+   "category": "legumes",
+   "per100": {
+    "kcal": 237,
+    "protein": 7.78,
+    "fat": 17.82,
+    "carbs": 15,
+    "fiber": 5.5,
+    "sugar": 0.62
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 30
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 174289,
+    "title": "Hummus, commercial",
+    "url": "https://fdc.nal.usda.gov/food-details/174289/nutrients"
+   }
+  },
+  {
+   "id": "breadWhole",
+   "name": "Хлеб цельнозерновой",
+   "category": "bakery",
+   "per100": {
+    "kcal": 252,
+    "protein": 12.45,
+    "fat": 3.5,
+    "carbs": 42.71,
+    "fiber": 6,
+    "sugar": 4.34
+   },
+   "units": [
+    {
+     "label": "ломтик",
+     "forms": [
+      "ломтик",
+      "ломтика",
+      "ломтиков"
+     ],
+     "grams": 32,
+     "source": "USDA: 1 slice"
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172688,
+    "title": "Bread, whole-wheat, commercially prepared",
+    "url": "https://fdc.nal.usda.gov/food-details/172688/nutrients"
+   }
+  },
+  {
+   "id": "baton",
+   "name": "Батон нарезной",
+   "category": "bakery",
+   "per100": {
+    "kcal": 265,
+    "protein": 7.5,
+    "fat": 2.9,
+    "carbs": 51.4
+   },
+   "units": [
+    {
+     "label": "ломтик",
+     "forms": [
+      "ломтик",
+      "ломтика",
+      "ломтиков"
+     ],
+     "grams": 25
+    }
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 16,
+    "title": "медиана 16 этикеток",
+    "codes": [
+     "4631145126650",
+     "4601347002212",
+     "4620021161083",
+     "4607073851018",
+     "4601388001205",
+     "2112407713921",
+     "06628622",
+     "4043138360024",
+     "4600631002631",
+     "4601787006610",
+     "4607043854582",
+     "4603243007971",
+     "4602977004188",
+     "99990000180",
+     "2823094300010",
+     "4680320011496"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4631145126650"
+   }
+  },
+  {
+   "id": "crispbread",
+   "name": "Хлебцы ржаные",
+   "category": "bakery",
+   "per100": {
+    "kcal": 334,
+    "protein": 9.6,
+    "fat": 0.9,
+    "carbs": 80.4,
+    "fiber": 22.9,
+    "sugar": 1.01
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 11,
+     "source": "USDA: 1 cracker (4-1/2\" x 2-1/2\" x 1/8\")"
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172744,
+    "title": "Crackers, rye, wafers, plain",
+    "url": "https://fdc.nal.usda.gov/food-details/172744/nutrients"
+   }
+  },
+  {
+   "id": "pancakes",
+   "name": "Блины тонкие, без начинки",
+   "category": "bakery",
+   "per100": {
+    "kcal": 224,
+    "protein": 8.85,
+    "fat": 11.29,
+    "carbs": 22.02,
+    "fiber": 0.6,
+    "sugar": 4.48
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 65,
+     "source": "USDA: 1 crepe, any size"
+    }
+   ],
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA FNDDS 2021–2023",
+    "id": 2708342,
+    "title": "Crepe, plain",
+    "url": "https://fdc.nal.usda.gov/food-details/2708342/nutrients"
+   }
+  },
+  {
+   "id": "pryanik",
+   "name": "Пряник",
+   "category": "sweets",
+   "per100": {
+    "kcal": 377.8,
+    "protein": 6,
+    "fat": 8,
+    "carbs": 71.8
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 40
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 9,
+    "title": "медиана 9 этикеток",
+    "codes": [
+     "4680009730106",
+     "4607002753819",
+     "7601627393495",
+     "4630026561795",
+     "4607002753833",
+     "2100100110420",
+     "4657798665964",
+     "4640017176242",
+     "4607108440316"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4680009730106"
+   }
+  },
+  {
+   "id": "cucumber",
+   "name": "Огурец",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 15,
+    "protein": 0.65,
+    "fat": 0.11,
+    "carbs": 3.63,
+    "fiber": 0.5,
+    "sugar": 1.67
+   },
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 168409,
+    "title": "Cucumber, with peel, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+   }
+  },
+  {
+   "id": "tomato",
+   "name": "Помидор",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 18,
+    "protein": 0.88,
+    "fat": 0.2,
+    "carbs": 3.89,
+    "fiber": 1.2,
+    "sugar": 2.63
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 123,
+     "source": "USDA: 1 medium whole (2-3/5\" dia)"
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170457,
+    "title": "Tomatoes, red, ripe, raw, year round average",
+    "url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+   }
+  },
+  {
+   "id": "broccoli",
+   "name": "Брокколи отварная",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 35,
+    "protein": 2.38,
+    "fat": 0.41,
+    "carbs": 7.18,
+    "fiber": 3.3,
+    "sugar": 1.39
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169967,
+    "title": "Broccoli, cooked, boiled, drained, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/169967/nutrients"
+   }
+  },
+  {
+   "id": "cabbage",
+   "name": "Капуста белокочанная",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 25,
+    "protein": 1.28,
+    "fat": 0.1,
+    "carbs": 5.8,
+    "fiber": 2.5,
+    "sugar": 3.2
+   },
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169975,
+    "title": "Cabbage, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169975/nutrients"
+   }
+  },
+  {
+   "id": "carrot",
+   "name": "Морковь",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 41,
+    "protein": 0.93,
+    "fat": 0.24,
+    "carbs": 9.58,
+    "fiber": 2.8,
+    "sugar": 4.74
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 61,
+     "source": "USDA: 1 medium"
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170393,
+    "title": "Carrots, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+   }
+  },
+  {
+   "id": "pepper",
+   "name": "Перец сладкий красный",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 26,
+    "protein": 0.99,
+    "fat": 0.3,
+    "carbs": 6.03,
+    "fiber": 2.1,
+    "sugar": 4.2
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 119,
+     "source": "USDA: 1 medium (approx 2-3/4\" long, 2-1/2 dia.)"
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170108,
+    "title": "Peppers, sweet, red, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+   }
+  },
+  {
+   "id": "lettuce",
+   "name": "Салат листовой",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 15,
+    "protein": 1.36,
+    "fat": 0.15,
+    "carbs": 2.87,
+    "fiber": 1.3,
+    "sugar": 0.78
+   },
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169249,
+    "title": "Lettuce, green leaf, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169249/nutrients"
+   }
+  },
+  {
+   "id": "zucchini",
+   "name": "Кабачок",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 17,
+    "protein": 1.21,
+    "fat": 0.32,
+    "carbs": 3.11,
+    "fiber": 1,
+    "sugar": 2.5
+   },
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169291,
+    "title": "Squash, summer, zucchini, includes skin, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169291/nutrients"
+   }
+  },
+  {
+   "id": "beet",
+   "name": "Свёкла варёная",
+   "category": "vegetables",
+   "per100": {
+    "kcal": 44,
+    "protein": 1.68,
+    "fat": 0.18,
+    "carbs": 9.96,
+    "fiber": 2,
+    "sugar": 7.96
+   },
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169146,
+    "title": "Beets, cooked, boiled, drained",
+    "url": "https://fdc.nal.usda.gov/food-details/169146/nutrients"
+   }
+  },
+  {
+   "id": "vegSalad",
+   "name": "Салат из помидоров и огурцов с маслом",
+   "category": "dishes",
+   "per100": {
+    "kcal": 122,
+    "protein": 0.52,
+    "fat": 10.18,
+    "carbs": 6.35,
+    "fiber": 0.6,
+    "sugar": 5.04
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA FNDDS 2021–2023",
+    "id": 2709756,
+    "title": "Tomato and cucumber salad made with tomato, cucumber, oil, and vinegar",
+    "url": "https://fdc.nal.usda.gov/food-details/2709756/nutrients"
+   }
+  },
+  {
+   "id": "cabbageSalad",
+   "name": "Салат из капусты",
+   "category": "dishes",
+   "per100": {
+    "kcal": 45,
+    "protein": 0.79,
+    "fat": 0.8,
+    "carbs": 8.93,
+    "fiber": 2.4,
+    "sugar": 5
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA FNDDS 2021–2023",
+    "id": 2709816,
+    "title": "Cabbage salad, NFS",
+    "url": "https://fdc.nal.usda.gov/food-details/2709816/nutrients"
+   }
+  },
+  {
+   "id": "banana",
+   "name": "Банан",
+   "category": "fruit",
+   "per100": {
+    "kcal": 89,
+    "protein": 1.09,
+    "fat": 0.33,
+    "carbs": 22.84,
+    "fiber": 2.6,
+    "sugar": 12.23
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 118,
+     "source": "USDA: 1 medium (7\" to 7-7/8\" long)"
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173944,
+    "title": "Bananas, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/173944/nutrients"
+   }
+  },
+  {
+   "id": "apple",
+   "name": "Яблоко",
+   "category": "fruit",
+   "per100": {
+    "kcal": 52,
+    "protein": 0.26,
+    "fat": 0.17,
+    "carbs": 13.81,
+    "fiber": 2.4,
+    "sugar": 10.39
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 182,
+     "source": "USDA: 1 medium (3\" dia)"
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171688,
+    "title": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+    "url": "https://fdc.nal.usda.gov/food-details/171688/nutrients"
+   }
+  },
+  {
+   "id": "orange",
+   "name": "Апельсин",
+   "category": "fruit",
+   "per100": {
+    "kcal": 47,
+    "protein": 0.94,
+    "fat": 0.12,
+    "carbs": 11.75,
+    "fiber": 2.4,
+    "sugar": 9.35
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 131,
+     "source": "USDA: 1 fruit (2-5/8\" dia)"
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169097,
+    "title": "Oranges, raw, all commercial varieties",
+    "url": "https://fdc.nal.usda.gov/food-details/169097/nutrients"
+   }
+  },
+  {
+   "id": "pear",
+   "name": "Груша",
+   "category": "fruit",
+   "per100": {
+    "kcal": 57,
+    "protein": 0.36,
+    "fat": 0.14,
+    "carbs": 15.23,
+    "fiber": 3.1,
+    "sugar": 9.75
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 178,
+     "source": "USDA: 1 medium"
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169118,
+    "title": "Pears, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169118/nutrients"
+   }
+  },
+  {
+   "id": "tangerine",
+   "name": "Мандарин",
+   "category": "fruit",
+   "per100": {
+    "kcal": 53,
+    "protein": 0.81,
+    "fat": 0.31,
+    "carbs": 13.34,
+    "fiber": 1.8,
+    "sugar": 10.58
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 88,
+     "source": "USDA: 1 medium (2-1/2\" dia)"
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169105,
+    "title": "Tangerines, (mandarin oranges), raw",
+    "url": "https://fdc.nal.usda.gov/food-details/169105/nutrients"
+   }
+  },
+  {
+   "id": "strawberry",
+   "name": "Клубника",
+   "category": "fruit",
+   "per100": {
+    "kcal": 32,
+    "protein": 0.67,
+    "fat": 0.3,
+    "carbs": 7.68,
+    "fiber": 2,
+    "sugar": 4.89
+   },
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 167762,
+    "title": "Strawberries, raw",
+    "url": "https://fdc.nal.usda.gov/food-details/167762/nutrients"
+   }
+  },
+  {
+   "id": "grapes",
+   "name": "Виноград",
+   "category": "fruit",
+   "per100": {
+    "kcal": 69,
+    "protein": 0.72,
+    "fat": 0.16,
+    "carbs": 18.1,
+    "fiber": 0.9,
+    "sugar": 15.48
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 174683,
+    "title": "Grapes, red or green (European type, such as Thompson seedless), raw",
+    "url": "https://fdc.nal.usda.gov/food-details/174683/nutrients"
+   }
+  },
+  {
+   "id": "driedApricot",
+   "name": "Курага",
+   "category": "fruit",
+   "per100": {
+    "kcal": 241,
+    "protein": 3.39,
+    "fat": 0.51,
+    "carbs": 62.64,
+    "fiber": 7.3,
+    "sugar": 53.44
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173941,
+    "title": "Apricots, dried, sulfured, uncooked",
+    "url": "https://fdc.nal.usda.gov/food-details/173941/nutrients"
+   }
+  },
+  {
+   "id": "walnuts",
+   "name": "Грецкие орехи",
+   "category": "nuts",
+   "per100": {
+    "kcal": 654,
+    "protein": 15.23,
+    "fat": 65.21,
+    "carbs": 13.71,
+    "fiber": 6.7,
+    "sugar": 2.61
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170187,
+    "title": "Nuts, walnuts, english",
+    "url": "https://fdc.nal.usda.gov/food-details/170187/nutrients"
+   }
+  },
+  {
+   "id": "almonds",
+   "name": "Миндаль",
+   "category": "nuts",
+   "per100": {
+    "kcal": 579,
+    "protein": 21.15,
+    "fat": 49.93,
+    "carbs": 21.55,
+    "fiber": 12.5,
+    "sugar": 4.35
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170567,
+    "title": "Nuts, almonds",
+    "url": "https://fdc.nal.usda.gov/food-details/170567/nutrients"
+   }
+  },
+  {
+   "id": "peanutButter",
+   "name": "Арахисовая паста",
+   "category": "nuts",
+   "per100": {
+    "kcal": 598,
+    "protein": 22.21,
+    "fat": 51.36,
+    "carbs": 22.31,
+    "fiber": 5,
+    "sugar": 10.49
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 16,
+     "source": "USDA: 2 tbsp"
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172470,
+    "title": "Peanut butter, smooth style, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/172470/nutrients"
+   }
+  },
+  {
+   "id": "water",
+   "name": "Вода",
+   "category": "drinks",
+   "per100": {
+    "kcal": 0,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173647,
+    "title": "Beverages, water, tap, drinking",
+    "url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+   }
+  },
+  {
+   "id": "tea",
+   "name": "Чай без сахара",
+   "category": "drinks",
+   "per100": {
+    "kcal": 1,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 0.3,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "units": [
+    {
+     "label": "чашка",
+     "forms": [
+      "чашка",
+      "чашки",
+      "чашек"
+     ],
+     "grams": 250
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173227,
+    "title": "Beverages, tea, black, brewed, prepared with tap water",
+    "url": "https://fdc.nal.usda.gov/food-details/173227/nutrients"
+   }
+  },
+  {
+   "id": "coffee",
+   "name": "Кофе чёрный",
+   "category": "drinks",
+   "per100": {
+    "kcal": 1,
+    "protein": 0.12,
+    "fat": 0.02,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "units": [
+    {
+     "label": "чашка",
+     "forms": [
+      "чашка",
+      "чашки",
+      "чашек"
+     ],
+     "grams": 250
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171890,
+    "title": "Beverages, coffee, brewed, prepared with tap water",
+    "url": "https://fdc.nal.usda.gov/food-details/171890/nutrients"
+   }
+  },
+  {
+   "id": "coffeeMilk",
+   "name": "Кофе латте",
+   "category": "drinks",
+   "per100": {
+    "kcal": 43,
+    "protein": 2.81,
+    "fat": 1.61,
+    "carbs": 4.35,
+    "fiber": 0,
+    "sugar": 4.06
+   },
+   "units": [
+    {
+     "label": "чашка",
+     "forms": [
+      "чашка",
+      "чашки",
+      "чашек"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA FNDDS 2021–2023",
+    "id": 2710386,
+    "title": "Coffee, Latte",
+    "url": "https://fdc.nal.usda.gov/food-details/2710386/nutrients"
+   }
+  },
+  {
+   "id": "cappuccino",
+   "name": "Капучино",
+   "category": "drinks",
+   "per100": {
+    "kcal": 27,
+    "protein": 1.71,
+    "fat": 0.99,
+    "carbs": 2.75,
+    "fiber": 0,
+    "sugar": 2.46
+   },
+   "units": [
+    {
+     "label": "чашка",
+     "forms": [
+      "чашка",
+      "чашки",
+      "чашек"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA FNDDS 2021–2023",
+    "id": 2710472,
+    "title": "Coffee, Cappuccino",
+    "url": "https://fdc.nal.usda.gov/food-details/2710472/nutrients"
+   }
+  },
+  {
+   "id": "juice",
+   "name": "Сок апельсиновый",
+   "category": "drinks",
+   "per100": {
+    "kcal": 45,
+    "protein": 0.7,
+    "fat": 0.2,
+    "carbs": 10.4,
+    "fiber": 0.2,
+    "sugar": 8.4
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "meals": [
+    "breakfast"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169098,
+    "title": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+    "url": "https://fdc.nal.usda.gov/food-details/169098/nutrients"
+   }
+  },
+  {
+   "id": "cola",
+   "name": "Кола",
+   "category": "drinks",
+   "per100": {
+    "kcal": 42,
+    "protein": 0,
+    "fat": 0.25,
+    "carbs": 10.36,
+    "fiber": 0,
+    "sugar": 9.94
+   },
+   "units": [
+    {
+     "label": "стакан",
+     "forms": [
+      "стакан",
+      "стакана",
+      "стаканов"
+     ],
+     "grams": 250
+    }
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 174852,
+    "title": "Beverages, carbonated, cola, regular",
+    "url": "https://fdc.nal.usda.gov/food-details/174852/nutrients"
+   }
+  },
+  {
+   "id": "cookie",
+   "name": "Печенье овсяное",
+   "category": "sweets",
+   "per100": {
+    "kcal": 450,
+    "protein": 6.2,
+    "fat": 18.1,
+    "carbs": 68.7,
+    "fiber": 2.8,
+    "sugar": 24.66
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 18,
+     "source": "USDA: 1 large"
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 172725,
+    "title": "Cookies, oatmeal, commercially prepared, regular",
+    "url": "https://fdc.nal.usda.gov/food-details/172725/nutrients"
+   }
+  },
+  {
+   "id": "chocoDark",
+   "name": "Шоколад горький 70–85 %",
+   "category": "sweets",
+   "per100": {
+    "kcal": 598,
+    "protein": 7.79,
+    "fat": 42.63,
+    "carbs": 45.9,
+    "fiber": 10.9,
+    "sugar": 23.99
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 170273,
+    "title": "Chocolate, dark, 70-85% cacao solids",
+    "url": "https://fdc.nal.usda.gov/food-details/170273/nutrients"
+   }
+  },
+  {
+   "id": "chocoMilk",
+   "name": "Шоколад молочный",
+   "category": "sweets",
+   "per100": {
+    "kcal": 535,
+    "protein": 7.65,
+    "fat": 29.66,
+    "carbs": 59.4,
+    "fiber": 3.4,
+    "sugar": 51.5
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 167587,
+    "title": "Candies, milk chocolate",
+    "url": "https://fdc.nal.usda.gov/food-details/167587/nutrients"
+   }
+  },
+  {
+   "id": "zefir",
+   "name": "Зефир",
+   "category": "sweets",
+   "per100": {
+    "kcal": 320,
+    "protein": 0.8,
+    "fat": 0,
+    "carbs": 80.4
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 35
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 5,
+    "title": "медиана 5 этикеток",
+    "codes": [
+     "4606038031229",
+     "260300160102000160120011",
+     "4603513005324",
+     "2416233100017",
+     "4607170053360"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4606038031229"
+   }
+  },
+  {
+   "id": "honey",
+   "name": "Мёд",
+   "category": "sweets",
+   "per100": {
+    "kcal": 304,
+    "protein": 0.3,
+    "fat": 0,
+    "carbs": 82.4,
+    "fiber": 0.2,
+    "sugar": 82.12
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 21,
+     "source": "USDA: 1 tbsp"
+    }
+   ],
+   "standalone": false,
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169640,
+    "title": "Honey",
+    "url": "https://fdc.nal.usda.gov/food-details/169640/nutrients"
+   }
+  },
+  {
+   "id": "sugar",
+   "name": "Сахар",
+   "category": "sweets",
+   "per100": {
+    "kcal": 387,
+    "protein": 0,
+    "fat": 0,
+    "carbs": 99.98,
+    "fiber": 0,
+    "sugar": 99.8
+   },
+   "units": [
+    {
+     "label": "ч. л.",
+     "grams": 4.2,
+     "source": "USDA: 1 tsp"
+    }
+   ],
+   "standalone": false,
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 169655,
+    "title": "Sugars, granulated",
+    "url": "https://fdc.nal.usda.gov/food-details/169655/nutrients"
+   }
+  },
+  {
+   "id": "icecream",
+   "name": "Мороженое ванильное",
+   "category": "sweets",
+   "per100": {
+    "kcal": 207,
+    "protein": 3.5,
+    "fat": 11,
+    "carbs": 23.6,
+    "fiber": 0.7,
+    "sugar": 21.22
+   },
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 167575,
+    "title": "Ice creams, vanilla",
+    "url": "https://fdc.nal.usda.gov/food-details/167575/nutrients"
+   }
+  },
+  {
+   "id": "oil",
+   "name": "Масло подсолнечное",
+   "category": "fats",
+   "per100": {
+    "kcal": 884,
+    "protein": 0,
+    "fat": 100,
+    "carbs": 0,
+    "fiber": 0,
+    "sugar": 0
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 13.6,
+     "source": "USDA: 1 tbsp"
+    }
+   ],
+   "standalone": false,
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 171017,
+    "title": "Oil, sunflower, linoleic (less than 60%)",
+    "url": "https://fdc.nal.usda.gov/food-details/171017/nutrients"
+   }
+  },
+  {
+   "id": "butter",
+   "name": "Масло сливочное",
+   "category": "fats",
+   "per100": {
+    "kcal": 717,
+    "protein": 0.85,
+    "fat": 81.11,
+    "carbs": 0.06,
+    "fiber": 0,
+    "sugar": 0.06
+   },
+   "standalone": false,
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 173430,
+    "title": "Butter, without salt",
+    "url": "https://fdc.nal.usda.gov/food-details/173430/nutrients"
+   }
+  },
+  {
+   "id": "mayo",
+   "name": "Майонез «Провансаль» 67 %",
+   "category": "fats",
+   "per100": {
+    "kcal": 616.8,
+    "protein": 0.4,
+    "fat": 67,
+    "carbs": 2.5,
+    "sugar": 2
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 15
+    }
+   ],
+   "standalone": false,
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 14,
+    "title": "медиана 14 этикеток",
+    "codes": [
+     "4600699503910",
+     "4601674082956",
+     "4600851011550",
+     "4600699503804",
+     "4600699502210",
+     "4600699502197",
+     "4601363001329",
+     "4600528347265",
+     "4601363001572",
+     "4600851011604",
+     "4680328010873",
+     "4600851011598",
+     "4823097405550",
+     "4606038079009"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4600699503910"
+   }
+  },
+  {
+   "id": "ketchup",
+   "name": "Кетчуп",
+   "category": "fats",
+   "per100": {
+    "kcal": 101,
+    "protein": 1.04,
+    "fat": 0.1,
+    "carbs": 27.4,
+    "fiber": 0.3,
+    "sugar": 21.27
+   },
+   "units": [
+    {
+     "label": "ложка",
+     "forms": [
+      "ложка",
+      "ложки",
+      "ложек"
+     ],
+     "grams": 17,
+     "source": "USDA: 1 tbsp"
+    }
+   ],
+   "standalone": false,
+   "source": {
+    "kind": "usda",
+    "label": "USDA SR Legacy",
+    "id": 168556,
+    "title": "Catsup",
+    "url": "https://fdc.nal.usda.gov/food-details/168556/nutrients"
+   }
+  },
+  {
+   "id": "pizza",
+   "name": "Пицца сырная",
+   "category": "dishes",
+   "per100": {
+    "kcal": 266,
+    "protein": 11.39,
+    "fat": 9.69,
+    "carbs": 33.33,
+    "fiber": 2.3,
+    "sugar": 3.58
+   },
+   "units": [
+    {
+     "label": "кусок",
+     "forms": [
+      "кусок",
+      "куска",
+      "кусков"
+     ],
+     "grams": 86,
+     "source": "USDA: 1 piece, medium pizza"
+    }
+   ],
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "usda",
+    "label": "USDA FNDDS 2021–2023",
+    "id": 2708614,
+    "title": "Pizza, cheese, from restaurant or fast food, NS as to type of crust",
+    "url": "https://fdc.nal.usda.gov/food-details/2708614/nutrients"
+   }
+  },
+  {
+   "id": "shawarma",
+   "name": "Шаурма с курицей",
+   "category": "dishes",
+   "per100": {
+    "kcal": 203.1,
+    "protein": 7.8,
+    "fat": 11.9,
+    "carbs": 20.9
+   },
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 3,
+    "title": "медиана 3 этикеток",
+    "codes": [
+     "4607968571120",
+     "2101815000013",
+     "2100100572730"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4607968571120"
+   }
+  },
+  {
+   "id": "proteinBar",
+   "name": "Протеиновый батончик",
+   "category": "sports",
+   "per100": {
+    "kcal": 377.5,
+    "protein": 20,
+    "fat": 12.3,
+    "carbs": 46.1,
+    "fiber": 4
+   },
+   "units": [
+    {
+     "label": "шт.",
+     "grams": 50
+    }
+   ],
+   "meals": [
+    "snack"
+   ],
+   "source": {
+    "kind": "off",
+    "label": "Open Food Facts",
+    "n": 4,
+    "title": "медиана 4 этикеток",
+    "codes": [
+     "4630019678554",
+     "4630019678578",
+     "4640125883971",
+     "99990000181"
+    ],
+    "url": "https://world.openfoodfacts.org/product/4630019678554"
+   }
+  }
+ ]
+}

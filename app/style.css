@@ -155,3 +155,5 @@ select { margin-top: 8px; }
 }
 .toast-action { border: 0; background: none; color: #8fd8a8; font-weight: 700; padding: 4px; }
 .card > .row:first-child { border-top: 0; }
+.source { margin-top: -4px; }
+.source a { color: inherit; }

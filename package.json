@@ -10,7 +10,9 @@
     "test": "node --test test/*.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "build:web": "node scripts/build-web.mjs"
+    "build:web": "node scripts/build-web.mjs",
+    "build:catalog": "node scripts/build-catalog.mjs",
+    "check:catalog": "node scripts/build-catalog.mjs --check"
   },
   "license": "UNLICENSED",
   "devDependencies": {

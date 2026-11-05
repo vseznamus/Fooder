@@ -1,0 +1,1321 @@
+{
+ "_doc": "Карта базы продуктов: русское название → первичный источник. Пищевая ценность НЕ пишется вручную: её берёт scripts/build-catalog.mjs из data/usda (USDA FoodData Central, по fdc_id) или data/off (медиана этикеток Open Food Facts после фильтров). Вес «шт./ломтик/ложка» — из порций USDA (usdaPortion) или стандартная мера (grams).",
+ "products": [
+  {
+   "id": "tvorog0",
+   "name": "Творог нежирный (0–2 %)",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "off": {
+    "queries": [
+     "творог 0%",
+     "творог 2%"
+    ],
+    "name": "^творог",
+    "exclude": "детск|зерн|мягк|с |вкус|изюм|ягод|ванил|сладк|яблок|банан|персик",
+    "fat": [
+     0,
+     2
+    ]
+   }
+  },
+  {
+   "id": "tvorog5",
+   "name": "Творог 5 %",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "off": {
+    "queries": [
+     "творог 5%",
+     "творог 2%",
+     "творог 0%",
+     "творог 9%"
+    ],
+    "name": "^творог",
+    "exclude": "детск|зерн|мягк|с |вкус|изюм|ягод|ванил|сладк|яблок|банан",
+    "fat": [
+     4.5,
+     5.5
+    ]
+   }
+  },
+  {
+   "id": "tvorog9",
+   "name": "Творог 9 %",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "off": {
+    "queries": [
+     "творог 9%",
+     "творог 5%"
+    ],
+    "name": "^творог",
+    "exclude": "детск|зерн|мягк|с |вкус|изюм|ягод|ванил|сладк|яблок|банан",
+    "fat": [
+     8.5,
+     9.5
+    ]
+   }
+  },
+  {
+   "id": "milk",
+   "name": "Молоко 2,5 %",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   },
+   "off": {
+    "queries": [
+     "молоко 2,5%"
+    ],
+    "name": "молоко",
+    "exclude": "сгущ|кокос|овсян|соев|миндал|шоколад|коктейл|детск|сух|банан|клубн",
+    "fat": [
+     2.4,
+     2.6
+    ]
+   }
+  },
+  {
+   "id": "milk32",
+   "name": "Молоко 3,2 %",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   },
+   "off": {
+    "queries": [
+     "молоко 3,2%"
+    ],
+    "name": "молоко",
+    "exclude": "сгущ|кокос|овсян|соев|миндал|шоколад|коктейл|детск|сух|банан|клубн",
+    "fat": [
+     3.1,
+     3.3
+    ]
+   }
+  },
+  {
+   "id": "kefir1",
+   "name": "Кефир 1 %",
+   "category": "dairy",
+   "meals": [
+    "snack",
+    "dinner"
+   ],
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   },
+   "off": {
+    "queries": [
+     "кефир 1%",
+     "кефир 2,5%",
+     "кефир 3,2%"
+    ],
+    "name": "кефир",
+    "exclude": "детск|клубн|ягод|вкус|напиток",
+    "fat": [
+     0.9,
+     1.1
+    ]
+   }
+  },
+  {
+   "id": "kefir25",
+   "name": "Кефир 2,5 %",
+   "category": "dairy",
+   "meals": [
+    "snack",
+    "dinner"
+   ],
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   },
+   "off": {
+    "queries": [
+     "кефир 2,5%",
+     "кефир 1%",
+     "кефир 3,2%"
+    ],
+    "name": "кефир",
+    "exclude": "детск|клубн|ягод|вкус|напиток",
+    "fat": [
+     2.4,
+     2.6
+    ]
+   }
+  },
+  {
+   "id": "ryazhenka",
+   "name": "Ряженка 2,5–4 %",
+   "category": "dairy",
+   "meals": [
+    "snack",
+    "dinner"
+   ],
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   },
+   "off": {
+    "queries": [
+     "ряженка"
+    ],
+    "name": "ряженка",
+    "exclude": "клубн|ягод|вкус|с ",
+    "fat": [
+     2.4,
+     4.1
+    ]
+   }
+  },
+  {
+   "id": "sourCream",
+   "name": "Сметана 15 %",
+   "category": "dairy",
+   "addon": true,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "grams": 20
+   },
+   "off": {
+    "queries": [
+     "сметана 15%",
+     "сметана 20%"
+    ],
+    "name": "сметан",
+    "exclude": "чипс|соус|lay|напит|продукт",
+    "fat": [
+     14.5,
+     15.5
+    ]
+   }
+  },
+  {
+   "id": "yogurtGreek",
+   "name": "Йогурт греческий нежирный",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 170903
+  },
+  {
+   "id": "yogurtFruit",
+   "name": "Йогурт фруктовый нежирный",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 170889
+  },
+  {
+   "id": "cheese",
+   "name": "Сыр полутвёрдый (типа гауды)",
+   "category": "dairy",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "unit": {
+    "label": "ломтик",
+    "forms": [
+     "ломтик",
+     "ломтика",
+     "ломтиков"
+    ],
+    "grams": 20
+   },
+   "usda": 171241
+  },
+  {
+   "id": "mozzarella",
+   "name": "Моцарелла",
+   "category": "dairy",
+   "usda": 170845
+  },
+  {
+   "id": "syrniki",
+   "name": "Сырники",
+   "category": "dairy",
+   "meals": [
+    "breakfast"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 60
+   },
+   "off": {
+    "queries": [
+     "сырники"
+    ],
+    "name": "^сырники",
+    "exclude": "кето|продукт|смесь|для |кураг|клубн|начинк|вишн|изюм"
+   }
+  },
+  {
+   "id": "syrok",
+   "name": "Сырок глазированный",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 40
+   },
+   "off": {
+    "queries": [
+     "сырок глазированный"
+    ],
+    "name": "сыр[оа]к",
+    "exclude": "протеин|без сахар"
+   }
+  },
+  {
+   "id": "egg",
+   "name": "Яйцо куриное",
+   "category": "eggs",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 171287,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "large"
+   }
+  },
+  {
+   "id": "eggBoiled",
+   "name": "Яйцо варёное",
+   "category": "eggs",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 173424,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "large"
+   }
+  },
+  {
+   "id": "omelet",
+   "name": "Омлет",
+   "category": "eggs",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 172185
+  },
+  {
+   "id": "chicken",
+   "name": "Куриная грудка отварная",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 171478
+  },
+  {
+   "id": "chickenRoast",
+   "name": "Куриная грудка запечённая",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 171477
+  },
+  {
+   "id": "chickenThigh",
+   "name": "Куриное бедро запечённое, без кожи",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 172388
+  },
+  {
+   "id": "turkey",
+   "name": "Грудка индейки запечённая",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 174516
+  },
+  {
+   "id": "beef",
+   "name": "Говядина тушёная, постная",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 169444
+  },
+  {
+   "id": "pork",
+   "name": "Свиная корейка запечённая, постная",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 168233
+  },
+  {
+   "id": "cutletChicken",
+   "name": "Котлета куриная",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 75
+   },
+   "off": {
+    "queries": [
+     "котлеты куриные",
+     "котлеты говяжьи"
+    ],
+    "name": "^котлет.*(кур|цыпл)|^котлет[ыа]? куриные",
+    "exclude": "панир|наггет|нагет|растит|немясо|вкус|соев"
+   }
+  },
+  {
+   "id": "cutlet",
+   "name": "Котлета мясная",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 75
+   },
+   "off": {
+    "queries": [
+     "котлеты говяжьи",
+     "котлеты куриные"
+    ],
+    "name": "^котлет",
+    "exclude": "кур|цыпл|индей|рыб|панир|растит|овощ|соев|немясо|вкус"
+   }
+  },
+  {
+   "id": "sausages",
+   "name": "Сосиски (мясо и птица)",
+   "category": "meat",
+   "meals": [
+    "breakfast",
+    "dinner"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 50
+   },
+   "usda": 173875
+  },
+  {
+   "id": "ham",
+   "name": "Ветчина",
+   "category": "meat",
+   "meals": [
+    "breakfast"
+   ],
+   "unit": {
+    "label": "ломтик",
+    "forms": [
+     "ломтик",
+     "ломтика",
+     "ломтиков"
+    ],
+    "grams": 20
+   },
+   "off": {
+    "queries": [
+     "ветчина"
+    ],
+    "name": "^ветчина",
+    "exclude": "сыр|пицц|блин|рулет"
+   }
+  },
+  {
+   "id": "pelmeni",
+   "name": "Пельмени",
+   "category": "meat",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "off": {
+    "queries": [
+     "пельмени"
+    ],
+    "name": "пельмени",
+    "exclude": "немясо|растит|соев|сливк|рыб"
+   }
+  },
+  {
+   "id": "salmon",
+   "name": "Лосось атлантический запечённый",
+   "category": "fish",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 175168
+  },
+  {
+   "id": "cod",
+   "name": "Треска запечённая",
+   "category": "fish",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 171956
+  },
+  {
+   "id": "tuna",
+   "name": "Тунец в собственном соку",
+   "category": "fish",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 173709
+  },
+  {
+   "id": "shrimp",
+   "name": "Креветки варёные",
+   "category": "fish",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 171971
+  },
+  {
+   "id": "buckwheat",
+   "name": "Гречка варёная",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 170686
+  },
+  {
+   "id": "rice",
+   "name": "Рис белый варёный",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 168878
+  },
+  {
+   "id": "oatmeal",
+   "name": "Овсянка на воде",
+   "category": "grains",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 173905
+  },
+  {
+   "id": "pasta",
+   "name": "Макароны варёные",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 169737
+  },
+  {
+   "id": "bulgur",
+   "name": "Булгур варёный",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 170287
+  },
+  {
+   "id": "potato",
+   "name": "Картофель отварной",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 170440
+  },
+  {
+   "id": "mash",
+   "name": "Картофельное пюре с молоком и маслом",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 168555
+  },
+  {
+   "id": "fries",
+   "name": "Картофель фри",
+   "category": "grains",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 170698
+  },
+  {
+   "id": "granola",
+   "name": "Гранола",
+   "category": "grains",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 171646
+  },
+  {
+   "id": "lentils",
+   "name": "Чечевица варёная",
+   "category": "legumes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 172421
+  },
+  {
+   "id": "chickpeas",
+   "name": "Нут варёный",
+   "category": "legumes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 173757
+  },
+  {
+   "id": "beans",
+   "name": "Фасоль красная варёная",
+   "category": "legumes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 175194
+  },
+  {
+   "id": "hummus",
+   "name": "Хумус",
+   "category": "legumes",
+   "meals": [
+    "snack"
+   ],
+   "usda": 174289,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "grams": 30
+   }
+  },
+  {
+   "id": "breadWhole",
+   "name": "Хлеб цельнозерновой",
+   "category": "bakery",
+   "usda": 172688,
+   "unit": {
+    "label": "ломтик",
+    "forms": [
+     "ломтик",
+     "ломтика",
+     "ломтиков"
+    ],
+    "usdaPortion": "slice"
+   }
+  },
+  {
+   "id": "baton",
+   "name": "Батон нарезной",
+   "category": "bakery",
+   "unit": {
+    "label": "ломтик",
+    "forms": [
+     "ломтик",
+     "ломтика",
+     "ломтиков"
+    ],
+    "grams": 25
+   },
+   "off": {
+    "queries": [
+     "батон нарезной"
+    ],
+    "name": "^батон",
+    "exclude": "отруб|подсолн|злак|зерн|изюм"
+   }
+  },
+  {
+   "id": "crispbread",
+   "name": "Хлебцы ржаные",
+   "category": "bakery",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 172744,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "cracker ("
+   }
+  },
+  {
+   "id": "pancakes",
+   "name": "Блины тонкие, без начинки",
+   "category": "bakery",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 2708342,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "1 crepe"
+   }
+  },
+  {
+   "id": "pryanik",
+   "name": "Пряник",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 40
+   },
+   "off": {
+    "queries": [
+     "пряник"
+    ],
+    "name": "^пряник",
+    "exclude": "без сахар|протеин"
+   }
+  },
+  {
+   "id": "cucumber",
+   "name": "Огурец",
+   "category": "vegetables",
+   "usda": 168409
+  },
+  {
+   "id": "tomato",
+   "name": "Помидор",
+   "category": "vegetables",
+   "usda": 170457,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium whole"
+   }
+  },
+  {
+   "id": "broccoli",
+   "name": "Брокколи отварная",
+   "category": "vegetables",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 169967
+  },
+  {
+   "id": "cabbage",
+   "name": "Капуста белокочанная",
+   "category": "vegetables",
+   "usda": 169975
+  },
+  {
+   "id": "carrot",
+   "name": "Морковь",
+   "category": "vegetables",
+   "usda": 170393,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium"
+   }
+  },
+  {
+   "id": "pepper",
+   "name": "Перец сладкий красный",
+   "category": "vegetables",
+   "usda": 170108,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium"
+   }
+  },
+  {
+   "id": "lettuce",
+   "name": "Салат листовой",
+   "category": "vegetables",
+   "usda": 169249
+  },
+  {
+   "id": "zucchini",
+   "name": "Кабачок",
+   "category": "vegetables",
+   "usda": 169291
+  },
+  {
+   "id": "beet",
+   "name": "Свёкла варёная",
+   "category": "vegetables",
+   "usda": 169146
+  },
+  {
+   "id": "vegSalad",
+   "name": "Салат из помидоров и огурцов с маслом",
+   "category": "dishes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 2709756
+  },
+  {
+   "id": "cabbageSalad",
+   "name": "Салат из капусты",
+   "category": "dishes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 2709816
+  },
+  {
+   "id": "banana",
+   "name": "Банан",
+   "category": "fruit",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 173944,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium"
+   }
+  },
+  {
+   "id": "apple",
+   "name": "Яблоко",
+   "category": "fruit",
+   "meals": [
+    "snack"
+   ],
+   "usda": 171688,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium"
+   }
+  },
+  {
+   "id": "orange",
+   "name": "Апельсин",
+   "category": "fruit",
+   "meals": [
+    "snack"
+   ],
+   "usda": 169097,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "fruit ("
+   }
+  },
+  {
+   "id": "pear",
+   "name": "Груша",
+   "category": "fruit",
+   "meals": [
+    "snack"
+   ],
+   "usda": 169118,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium"
+   }
+  },
+  {
+   "id": "tangerine",
+   "name": "Мандарин",
+   "category": "fruit",
+   "meals": [
+    "snack"
+   ],
+   "usda": 169105,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "medium"
+   }
+  },
+  {
+   "id": "strawberry",
+   "name": "Клубника",
+   "category": "fruit",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 167762
+  },
+  {
+   "id": "grapes",
+   "name": "Виноград",
+   "category": "fruit",
+   "meals": [
+    "snack"
+   ],
+   "usda": 174683
+  },
+  {
+   "id": "driedApricot",
+   "name": "Курага",
+   "category": "fruit",
+   "meals": [
+    "snack"
+   ],
+   "usda": 173941
+  },
+  {
+   "id": "walnuts",
+   "name": "Грецкие орехи",
+   "category": "nuts",
+   "meals": [
+    "snack"
+   ],
+   "usda": 170187
+  },
+  {
+   "id": "almonds",
+   "name": "Миндаль",
+   "category": "nuts",
+   "meals": [
+    "snack"
+   ],
+   "usda": 170567
+  },
+  {
+   "id": "peanutButter",
+   "name": "Арахисовая паста",
+   "category": "nuts",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 172470,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "usdaPortion": "tbsp"
+   }
+  },
+  {
+   "id": "water",
+   "name": "Вода",
+   "category": "drinks",
+   "usda": 173647,
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "tea",
+   "name": "Чай без сахара",
+   "category": "drinks",
+   "usda": 173227,
+   "unit": {
+    "label": "чашка",
+    "forms": [
+     "чашка",
+     "чашки",
+     "чашек"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "coffee",
+   "name": "Кофе чёрный",
+   "category": "drinks",
+   "usda": 171890,
+   "unit": {
+    "label": "чашка",
+    "forms": [
+     "чашка",
+     "чашки",
+     "чашек"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "coffeeMilk",
+   "name": "Кофе латте",
+   "category": "drinks",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 2710386,
+   "unit": {
+    "label": "чашка",
+    "forms": [
+     "чашка",
+     "чашки",
+     "чашек"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "cappuccino",
+   "name": "Капучино",
+   "category": "drinks",
+   "meals": [
+    "breakfast",
+    "snack"
+   ],
+   "usda": 2710472,
+   "unit": {
+    "label": "чашка",
+    "forms": [
+     "чашка",
+     "чашки",
+     "чашек"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "juice",
+   "name": "Сок апельсиновый",
+   "category": "drinks",
+   "meals": [
+    "breakfast"
+   ],
+   "usda": 169098,
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "cola",
+   "name": "Кола",
+   "category": "drinks",
+   "usda": 174852,
+   "unit": {
+    "label": "стакан",
+    "forms": [
+     "стакан",
+     "стакана",
+     "стаканов"
+    ],
+    "grams": 250
+   }
+  },
+  {
+   "id": "cookie",
+   "name": "Печенье овсяное",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "usda": 172725,
+   "unit": {
+    "label": "шт.",
+    "usdaPortion": "large"
+   }
+  },
+  {
+   "id": "chocoDark",
+   "name": "Шоколад горький 70–85 %",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "usda": 170273
+  },
+  {
+   "id": "chocoMilk",
+   "name": "Шоколад молочный",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "usda": 167587
+  },
+  {
+   "id": "zefir",
+   "name": "Зефир",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 35
+   },
+   "off": {
+    "queries": [
+     "зефир"
+    ],
+    "name": "^зефир",
+    "exclude": "без сахар|протеин|шокол"
+   }
+  },
+  {
+   "id": "honey",
+   "name": "Мёд",
+   "category": "sweets",
+   "addon": true,
+   "usda": 169640,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "usdaPortion": "tbsp"
+   }
+  },
+  {
+   "id": "sugar",
+   "name": "Сахар",
+   "category": "sweets",
+   "addon": true,
+   "usda": 169655,
+   "unit": {
+    "label": "ч. л.",
+    "usdaPortion": "tsp"
+   }
+  },
+  {
+   "id": "icecream",
+   "name": "Мороженое ванильное",
+   "category": "sweets",
+   "meals": [
+    "snack"
+   ],
+   "usda": 167575
+  },
+  {
+   "id": "oil",
+   "name": "Масло подсолнечное",
+   "category": "fats",
+   "addon": true,
+   "usda": 171017,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "usdaPortion": "tbsp"
+   }
+  },
+  {
+   "id": "butter",
+   "name": "Масло сливочное",
+   "category": "fats",
+   "addon": true,
+   "usda": 173430
+  },
+  {
+   "id": "mayo",
+   "name": "Майонез «Провансаль» 67 %",
+   "category": "fats",
+   "addon": true,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "grams": 15
+   },
+   "off": {
+    "queries": [
+     "майонез провансаль"
+    ],
+    "name": "майонез",
+    "exclude": "легк|лёгк|постн|соус|30|50",
+    "fat": [
+     60,
+     70
+    ]
+   }
+  },
+  {
+   "id": "ketchup",
+   "name": "Кетчуп",
+   "category": "fats",
+   "addon": true,
+   "usda": 168556,
+   "unit": {
+    "label": "ложка",
+    "forms": [
+     "ложка",
+     "ложки",
+     "ложек"
+    ],
+    "usdaPortion": "tbsp"
+   }
+  },
+  {
+   "id": "pizza",
+   "name": "Пицца сырная",
+   "category": "dishes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "usda": 2708614,
+   "unit": {
+    "label": "кусок",
+    "forms": [
+     "кусок",
+     "куска",
+     "кусков"
+    ],
+    "usdaPortion": "1 piece, medium pizza"
+   }
+  },
+  {
+   "id": "shawarma",
+   "name": "Шаурма с курицей",
+   "category": "dishes",
+   "meals": [
+    "lunch",
+    "dinner"
+   ],
+   "off": {
+    "queries": [
+     "шаурма"
+    ],
+    "name": "шаурм",
+    "exclude": "соус|лаваш$"
+   }
+  },
+  {
+   "id": "proteinBar",
+   "name": "Протеиновый батончик",
+   "category": "sports",
+   "meals": [
+    "snack"
+   ],
+   "unit": {
+    "label": "шт.",
+    "grams": 50
+   },
+   "off": {
+    "queries": [
+     "протеиновый батончик"
+    ],
+    "name": "батончик|bar",
+    "exclude": "corny|snickers|рот фронт|конфет|злаков",
+    "minProtein": 18
+   }
+  }
+ ]
+}
