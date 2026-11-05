@@ -6,7 +6,7 @@ import { MACROS } from './types.ts';
 import { remaining, totalOf, add, ZERO } from './nutrition.ts';
 import { buildHistory, mealShare, usualGrams, type HistoryStats } from './history.ts';
 import { portionOptions, usualPortion } from './portion.ts';
-import { isAllowed } from './settings.ts';
+import { isSuggestable } from './settings.ts';
 import { dateOf, mealByTime } from './time.ts';
 
 export interface TopUpInput {
@@ -129,7 +129,7 @@ export function suggestTopUp(input: TopUpInput): TopUpResult {
 
   const allowed = (id: string): Product | undefined => {
     const p = catalog.get(id);
-    return p && isAllowed(p, settings) ? p : undefined;
+    return p && isSuggestable(p, settings) ? p : undefined;
   };
 
   if (rem.kcal <= 0) {
@@ -243,6 +243,8 @@ export function scorePortion(product: Product, portion: Portion, ctx: EvalCtx): 
     if (m === main) continue;
     overMacro += Math.max(0, n[m] - Math.max(rem[m], 0)) / goals[m];
   }
+  // Сахар — если задан предел: штраф за выход за остаток «сахарного бюджета».
+  if (goals.sugarMax) overMacro += Math.max(0, (n.sugar ?? 0) - Math.max(rem.sugar ?? 0, 0)) / goals.sugarMax;
   const overMain = main ? Math.max(0, n[main] - ctx.need) / goals[main] : 0;
   // − порция тратит долю калорий заметно бóльшую, чем доля закрытого дефицита
   //   (и мягко — если выходит за «бюджет одного приёма»)
@@ -323,7 +325,8 @@ export function productTitle(p: Product): string {
 
 interface ComboItem {
   s: Suggestion;
-  options: { portion: Portion; v: [number, number, number, number] }[];
+  /** v = [ккал, Б, Ж, У, сахар] */
+  options: { portion: Portion; v: number[] }[];
 }
 
 const COMBO_MIN_KCAL = 150;
@@ -347,12 +350,13 @@ function findCombos(pool: Suggestion[], ctx: EvalCtx): Combo[] {
       .filter((p) => p.nutrients.kcal <= rem.kcal)
       .map((portion) => {
         const n = portion.nutrients;
-        return { portion, v: [n.kcal, n.protein, n.fat, n.carbs] as [number, number, number, number] };
+        return { portion, v: [n.kcal, n.protein, n.fat, n.carbs, n.sugar ?? 0] };
       }),
   }));
 
   const found: { idx: number[]; opt: number[]; err: number }[] = [];
-  const sumV = [0, 0, 0, 0];
+  const sumV = [0, 0, 0, 0, 0];
+  const sugarLeft = goals.sugarMax ? Math.max(0, rem.sugar ?? 0) : Infinity;
 
   const evaluate = (idx: number[], opt: number[]): void => {
     if (sumV[0]! > target[0]! + 1e-6 || sumV[0]! < target[0]! * COMBO_MIN_FILL) return;
@@ -361,6 +365,7 @@ function findCombos(pool: Suggestion[], ctx: EvalCtx): Combo[] {
       const d = sumV[k]! - target[k]!;
       err += (w[k]! * Math.abs(d) * (d > 0 ? 2 : 1)) / norm[k]!;
     }
+    if (sugarLeft !== Infinity) err += (2 * Math.max(0, sumV[4]! - sugarLeft)) / goals.sugarMax!;
     // Небольшие предпочтения: продукты из истории, подходящие к приёму пищи,
     // разные категории, меньше позиций, не то, что уже ел сегодня.
     const cats = new Set<string>();
@@ -390,14 +395,14 @@ function findCombos(pool: Suggestion[], ctx: EvalCtx): Combo[] {
       const options = items[i]!.options;
       for (let o = 0; o < options.length; o++) {
         const v = options[o]!.v;
-        if (sumV[0]! + v[0] > target[0]!) break; // варианты отсортированы по граммам → по ккал
-        for (let k = 0; k < 4; k++) sumV[k]! += v[k]!;
+        if (sumV[0]! + v[0]! > target[0]!) break; // варианты отсортированы по граммам → по ккал
+        for (let k = 0; k < 5; k++) sumV[k]! += v[k]!;
         idx.push(i);
         opt.push(o);
         dfs(i + 1);
         idx.pop();
         opt.pop();
-        for (let k = 0; k < 4; k++) sumV[k]! -= v[k]!;
+        for (let k = 0; k < 5; k++) sumV[k]! -= v[k]!;
       }
     }
   };

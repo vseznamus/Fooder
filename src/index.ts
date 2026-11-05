@@ -15,7 +15,7 @@ export { usualForMeal, oftenTogether, cooccurrence, sessionWeight, USUAL_TUNING 
 export type { UsualInput, UsualResult, UsualItem, MealTemplate, TogetherInput, TogetherItem } from './usual.ts';
 export { weeklyBalance, WEEKLY_THRESHOLDS } from './weekly.ts';
 export type { WeeklyCard, WeeklyInput, BalanceIssue } from './weekly.ts';
-export { isAllowed, dismissProduct, excludeCategory, restore, setEnabled } from './settings.ts';
+export { isAllowed, isSuggestable, dismissProduct, excludeCategory, restore, setEnabled } from './settings.ts';
 export { buildHistory, usualGrams, median } from './history.ts';
 export { portionOptions, usualPortion, roundNice, pluralRu } from './portion.ts';
 export { scale, sum, totalOf, remaining } from './nutrition.ts';

@@ -30,17 +30,22 @@ export const PRODUCTS: Product[] = [
   { id: 'salmon', name: 'Лосось запечённый', category: 'fish', per100: { kcal: 208, protein: 20, fat: 13, carbs: 0 }, meals: ['lunch', 'dinner'] },
   { id: 'yogurt', name: 'Йогурт греческий 2 %', category: 'dairy', per100: { kcal: 66, protein: 9, fat: 2, carbs: 3.6, sugar: 3.6 }, units: pcs(140), meals: ['breakfast', 'snack'] },
   { id: 'apple', name: 'Яблоко', category: 'fruit', per100: { kcal: 47, protein: 0.4, fat: 0.4, carbs: 9.8, fiber: 1.8, sugar: 10 }, units: pcs(150), meals: ['snack'] },
+  // Добавки: сами по себе не еда.
+  { id: 'oil', name: 'Масло подсолнечное', category: 'fats', per100: { kcal: 899, protein: 0, fat: 99.9, carbs: 0 }, standalone: false },
+  { id: 'mayo', name: 'Майонез', category: 'fats', per100: { kcal: 624, protein: 0.4, fat: 67, carbs: 2.6 }, standalone: false },
+  { id: 'honey', name: 'Мёд', category: 'sweets', per100: { kcal: 304, protein: 0.3, fat: 0, carbs: 82, sugar: 82 }, standalone: false },
   // Только в общей базе — в моей истории их нет.
   { id: 'shrimp', name: 'Креветки варёные', category: 'seafood', per100: { kcal: 95, protein: 20, fat: 1.5, carbs: 0 } },
   { id: 'lentils', name: 'Чечевица варёная', category: 'legumes', per100: { kcal: 116, protein: 9, fat: 0.4, carbs: 20, fiber: 8 } },
   { id: 'turkey', name: 'Филе индейки', category: 'meat', per100: { kcal: 114, protein: 24, fat: 1.5, carbs: 0 } },
   // «Сводный» продукт для тестов: ровно столько уже съедено к этому моменту (100 г = весь день).
+  { id: 'dayLowFat', name: 'Съедено ранее (мало жиров)', category: 'test', per100: { kcal: 1200, protein: 115, fat: 20, carbs: 140, sugar: 45 } },
   { id: 'dayBefore', name: 'Съедено ранее', category: 'test', per100: { kcal: 1400, protein: 75, fat: 65, carbs: 140 } },
 ];
 
 export const CATALOG: ReadonlyMap<string, Product> = new Map(PRODUCTS.map((p) => [p.id, p]));
 /** База без тестового «сводного» продукта — для сценариев, где он не нужен. */
-export const BASE_CATALOG: ReadonlyMap<string, Product> = new Map(PRODUCTS.filter((p) => p.id !== 'dayBefore').map((p) => [p.id, p]));
+export const BASE_CATALOG: ReadonlyMap<string, Product> = new Map(PRODUCTS.filter((p) => p.category !== 'test').map((p) => [p.id, p]));
 
 export const GOALS: Goals = { kcal: 2000, protein: 120, fat: 70, carbs: 230, fiber: 28, sugarMax: 50 };
 

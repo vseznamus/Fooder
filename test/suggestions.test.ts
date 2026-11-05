@@ -266,6 +266,38 @@ describe('6. Комбинация из 2–3 продуктов', () => {
   });
 });
 
+describe('Добавки и сахар', () => {
+  // Белок закрыт, жиров не хватает 50 г, сахара съедено 45 из 50 г; масло и мёд ели раньше.
+  const history = [
+    ...typicalHistory(),
+    entry(addDays(TODAY, -3), '13:00', 'lunch', 'oil', 15),
+    entry(addDays(TODAY, -2), '08:00', 'breakfast', 'honey', 20),
+    entry(TODAY, '14:00', 'lunch', 'dayLowFat', 100),
+  ];
+  const r = suggestTopUp({ goals: GOALS, history, catalog: CATALOG, settings: settings(), now: `${TODAY}T18:30` });
+
+  it('при нехватке жиров не предлагает масло или майонез ложками', () => {
+    assertOk(r);
+    assert.equal(r.focus.main, 'fat');
+    const all = [...r.suggestions.map((s) => s.product), ...r.combos.flatMap((c) => c.items.map((i) => i.product))];
+    assert.ok(all.length > 0);
+    assert.ok(all.every((p) => p.standalone !== false), all.map((p) => p.id).join());
+  });
+
+  it('при почти выбранном сахаре не предлагает сладкое', () => {
+    assertOk(r);
+    for (const s of r.suggestions) assert.ok((s.portion.nutrients.sugar ?? 0) <= 10, s.text);
+    for (const c of r.combos) assert.ok((c.total.sugar ?? 0) <= 10, c.text);
+  });
+
+  it('в карточке клетчатки нет печенья: важна плотность, а не граммы', () => {
+    const cards = weeklyBalance({ history: typicalHistory(), catalog: CATALOG, goals: GOALS, settings: settings(), now: `${TODAY}T09:00` });
+    const fiber = cards.find((c) => c.issue === 'lowFiber');
+    assert.ok(fiber);
+    assert.ok(!fiber.products.some((p) => p.product.id === 'cookie'));
+  });
+});
+
 describe('Недельный баланс', () => {
   /** Белковый день — граница серии. */
   const proteinDay = (d: string): DiaryEntry[] => [

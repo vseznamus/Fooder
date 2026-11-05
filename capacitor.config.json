@@ -1,0 +1,8 @@
+{
+  "appId": "com.vseznamus.fooder",
+  "appName": "Fooder",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  }
+}

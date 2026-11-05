@@ -5,6 +5,11 @@ export function isAllowed(product: Product, settings: SuggestionSettings): boole
   return !settings.excludedProductIds.includes(product.id) && !settings.excludedCategories.includes(product.category);
 }
 
+/** Можно ли предложить продукт как отдельную еду (не исключён и не добавка вроде масла). */
+export function isSuggestable(product: Product, settings: SuggestionSettings): boolean {
+  return product.standalone !== false && isAllowed(product, settings);
+}
+
 /** Кнопка «не предлагать это». Возвращает новые настройки, исходные не меняет. */
 export function dismissProduct(settings: SuggestionSettings, productId: string): SuggestionSettings {
   if (settings.excludedProductIds.includes(productId)) return settings;

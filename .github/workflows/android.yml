@@ -1,0 +1,89 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: android-apk
+  cancel-in-progress: false
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build:web
+      - run: npx cap sync android
+
+      # Постоянный ключ подписи берётся из секретов репозитория
+      # (FOODER_KEYSTORE_BASE64 + FOODER_KEYSTORE_PASSWORD). Пока их нет —
+      # сборка подписывается временным ключом: APK ставится, но обновление
+      # поверх такой версии потребует удалить предыдущую.
+      - name: Prepare signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.FOODER_KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.FOODER_KEYSTORE_PASSWORD }}
+        run: |
+          KS="$RUNNER_TEMP/fooder.jks"
+          if [ -n "$KEYSTORE_BASE64" ] && [ -n "$KEYSTORE_PASSWORD" ]; then
+            echo "$KEYSTORE_BASE64" | base64 -d > "$KS"
+            PASS="$KEYSTORE_PASSWORD"
+            echo "SIGNING_NOTE=Подписано постоянным ключом — ставится поверх предыдущих версий." >> "$GITHUB_ENV"
+          else
+            PASS="$(openssl rand -hex 16)"
+            keytool -genkeypair -keystore "$KS" -alias fooder -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "$PASS" -keypass "$PASS" -dname "CN=Fooder" -noprompt
+            echo "SIGNING_NOTE=Временная подпись: перед установкой следующей версии удалите эту (данные дневника сотрутся)." >> "$GITHUB_ENV"
+          fi
+          echo "::add-mask::$PASS"
+          {
+            echo "FOODER_KEYSTORE_PATH=$KS"
+            echo "FOODER_KEYSTORE_PASSWORD=$PASS"
+            echo "FOODER_KEY_PASSWORD=$PASS"
+            echo "FOODER_KEY_ALIAS=fooder"
+          } >> "$GITHUB_ENV"
+
+      - name: Build signed APK
+        working-directory: android
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - run: cp android/app/build/outputs/apk/release/app-release.apk fooder.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fooder-apk
+          path: fooder.apk
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v0.1.${{ github.run_number }}"
+          gh release create "$TAG" fooder.apk \
+            --target "${{ github.sha }}" \
+            --title "Fooder $TAG" \
+            --notes "Скачайте fooder.apk и установите на Android (разрешите установку из этого источника). $SIGNING_NOTE" \
+            --latest

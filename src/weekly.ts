@@ -6,7 +6,7 @@ import type { Catalog, DiaryEntry, Goals, Portion, Product, SuggestionSettings }
 import { buildHistory, usualGrams } from './history.ts';
 import { scale, totalOf } from './nutrition.ts';
 import { usualPortion } from './portion.ts';
-import { isAllowed } from './settings.ts';
+import { isSuggestable } from './settings.ts';
 import { addDays, dateOf } from './time.ts';
 import { productTitle } from './topUp.ts';
 
@@ -83,7 +83,7 @@ export function weeklyBalance(input: WeeklyInput): WeeklyCard[] {
   const stats = buildHistory(input.history, today, 60);
   const mine = [...stats.sessionCount.keys()]
     .map((id) => catalog.get(id))
-    .filter((p): p is Product => !!p && isAllowed(p, settings));
+    .filter((p): p is Product => !!p && isSuggestable(p, settings));
   const freq = (p: Product): number => Math.log1p(stats.sessionCount.get(p.id) ?? 0);
   const portionOf = (p: Product): Portion => usualPortion(p, usualGrams(stats, p.id));
 
@@ -109,7 +109,8 @@ export function weeklyBalance(input: WeeklyInput): WeeklyCard[] {
 
   if (streak.lowFiber >= minStreak) {
     const picks = mine
-      .filter((p) => (p.per100.fiber ?? 0) >= 2.5)
+      // Плотность клетчатки: от 1,5 г на 100 ккал (гречка, овощи, цельнозерновой хлеб — да, печенье — нет).
+      .filter((p) => p.per100.kcal > 0 && ((p.per100.fiber ?? 0) / p.per100.kcal) * 100 >= 1.5)
       .sort((a, b) => (b.per100.fiber ?? 0) * freq(b) - (a.per100.fiber ?? 0) * freq(a))
       .slice(0, 3);
     cards.push({
