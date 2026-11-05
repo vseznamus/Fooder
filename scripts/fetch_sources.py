@@ -30,20 +30,20 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "data")
 USDA_SETS = {
     "sr_legacy_food_csv": "sr_legacy",
     "survey_food_csv": "fndds",
-    "foundation_food_csv": "foundation",
 }
 # Известные адреса — на случай, если страницу не удастся разобрать.
 USDA_FALLBACK = [
     "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
 ]
 
+# SR Legacy использует id нутриентов FDC (1008…), FNDDS — старые номера (208…).
 NUTRIENTS = {
-    "kcal": ["1008", "2048", "2047"],  # Energy (kcal); Atwater specific / general для Foundation
-    "protein": ["1003"],
-    "fat": ["1004"],
-    "carbs": ["1005"],  # Carbohydrate, by difference
-    "fiber": ["1079"],  # Fiber, total dietary
-    "sugar": ["2000", "1063"],  # Sugars, total including NLEA / Sugars, Total
+    "kcal": ["1008", "2048", "2047", "208"],  # Energy (kcal)
+    "protein": ["1003", "203"],
+    "fat": ["1004", "204"],  # Total lipid (fat)
+    "carbs": ["1005", "205"],  # Carbohydrate, by difference
+    "fiber": ["1079", "291"],  # Fiber, total dietary
+    "sugar": ["2000", "1063", "269"],  # Sugars, total
 }
 
 
@@ -162,51 +162,49 @@ def probe(url: str) -> str:
 
 
 def fetch_off() -> None:
-    """Российские товары из Open Food Facts — из ежедневной выгрузки всей базы (CSV),
-    поиск по API с серверов GitHub отвечает 403."""
+    """Российские товары из Open Food Facts через search.openfoodfacts.org
+    (старое API и выгрузка с серверов GitHub отвечают 403)."""
     os.makedirs(os.path.join(OUT, "off"), exist_ok=True)
-    for u in [
-        "https://world.openfoodfacts.org/api/v2/product/4600605006166.json",
-        "https://search.openfoodfacts.org/search?q=%D1%82%D0%B2%D0%BE%D1%80%D0%BE%D0%B3&page_size=1",
-        "https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz",
-    ]:
-        print(f"probe {u}: {probe(u)}")
-
-    url = "https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz"
-    import gzip
-    import shutil
-    import tempfile
-    csv.field_size_limit(sys.maxsize)
-    tmp = tempfile.NamedTemporaryFile(suffix=".csv.gz", delete=False)
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=1800) as r:
-            shutil.copyfileobj(r, tmp, 1 << 20)
-        tmp.close()
-        print(f"OFF dump: {os.path.getsize(tmp.name) // (1 << 20)} MB")
-        kept = 0
-        out_path = os.path.join(OUT, "off", "russia.csv")
-        with gzip.open(tmp.name, "rt", encoding="utf-8", errors="replace", newline="") as f, \
-             open(out_path, "w", newline="", encoding="utf-8") as out:
-            reader = csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
-            w = csv.writer(out)
-            cols = [c for c in OFF_FIELDS if c != "countries_tags"]
-            w.writerow(cols)
-            for row in reader:
-                if "en:russia" not in (row.get("countries_tags") or ""):
+    fields = "code,product_name,product_name_ru,brands,quantity,unique_scans_n,nutriments,countries_tags"
+    for i, q in enumerate(OFF_QUERIES):
+        params = urllib.parse.urlencode({
+            "q": f'{q} countries_tags:"en:russia"',
+            "langs": "ru",
+            "page_size": 40,
+            "fields": fields,
+            "sort_by": "-unique_scans_n",
+        })
+        url = f"https://search.openfoodfacts.org/search?{params}"
+        slug = re.sub(r"[^\w]+", "_", q).strip("_")
+        try:
+            data = json.loads(get(url, 90))
+            hits = data.get("hits", [])
+            if i == 0 and hits:
+                print("  first hit keys:", sorted(hits[0].keys()))
+                print("  first hit nutriments:", {k: v for k, v in (hits[0].get("nutriments") or {}).items() if k.endswith("_100g")})
+            keep = []
+            for p in hits:
+                n = p.get("nutriments") or {}
+                if any(n.get(k) is None for k in ("energy-kcal_100g", "proteins_100g", "fat_100g", "carbohydrates_100g")):
                     continue
-                if not row.get("energy-kcal_100g") or not row.get("proteins_100g") \
-                        or not row.get("fat_100g") or not row.get("carbohydrates_100g"):
-                    continue
-                if not (row.get("product_name_ru") or row.get("product_name")):
-                    continue
-                w.writerow([(row.get(c) or "").replace("\n", " ")[:200] for c in cols])
-                kept += 1
-        print(f"OFF Russia with full macros: {kept}")
-    except Exception as e:  # noqa: BLE001
-        print(f"OFF dump: ERROR {e}")
-    finally:
-        os.unlink(tmp.name)
+                name = p.get("product_name_ru") or p.get("product_name")
+                if isinstance(name, list):
+                    name = name[0] if name else None
+                brands = p.get("brands")
+                if isinstance(brands, list):
+                    brands = ", ".join(brands)
+                keep.append({
+                    "code": p.get("code"), "name": name, "brands": brands, "quantity": p.get("quantity"),
+                    "scans": p.get("unique_scans_n"),
+                    "kcal": n.get("energy-kcal_100g"), "protein": n.get("proteins_100g"), "fat": n.get("fat_100g"),
+                    "carbs": n.get("carbohydrates_100g"), "fiber": n.get("fiber_100g"), "sugar": n.get("sugars_100g"),
+                })
+            with open(os.path.join(OUT, "off", f"{slug}.json"), "w", encoding="utf-8") as f:
+                json.dump({"query": q, "url": url, "total": data.get("count"), "products": keep}, f, ensure_ascii=False, indent=1)
+            print(f"OFF '{q}': {len(hits)} hits, {len(keep)} with full macros")
+        except Exception as e:  # noqa: BLE001
+            print(f"OFF '{q}': ERROR {e}")
+        time.sleep(2)
 
 
 def main() -> int:
