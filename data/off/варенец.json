@@ -1,0 +1,6 @@
+{
+ "query": "варенец",
+ "url": "https://search.openfoodfacts.org/search?q=%D0%B2%D0%B0%D1%80%D0%B5%D0%BD%D0%B5%D1%86+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 3,
+ "products": []
+}

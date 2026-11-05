@@ -1,5 +1,4 @@
 USDA FoodData Central (public domain, CC0): https://fdc.nal.usda.gov/
-Downloaded 2026-11-05T18:55:19+00:00
-foundation: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-10-29.zip
+Downloaded 2026-11-05T18:56:45+00:00
 sr_legacy: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip
 fndds: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_survey_food_csv_2024-10-31.zip

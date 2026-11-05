@@ -1,0 +1,46 @@
+{
+ "query": "борщ",
+ "url": "https://search.openfoodfacts.org/search?q=%D0%B1%D0%BE%D1%80%D1%89+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 4,
+ "products": [
+  {
+   "code": "4640107814207",
+   "name": "Борщ С Говядиной",
+   "brands": "Лавка",
+   "quantity": null,
+   "scans": null,
+   "kcal": 37.3,
+   "protein": 2.4,
+   "fat": 1.7,
+   "carbs": 3.1,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "4670117693714",
+   "name": "Борщ",
+   "brands": "Самокат",
+   "quantity": null,
+   "scans": null,
+   "kcal": 53.2,
+   "protein": 1.6,
+   "fat": 2,
+   "carbs": 7.2,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "7613036571241",
+   "name": "Заправка для борща",
+   "brands": "Maggi",
+   "quantity": "250 г",
+   "scans": null,
+   "kcal": 92,
+   "protein": 1.6,
+   "fat": 0.75,
+   "carbs": 18,
+   "fiber": null,
+   "sugar": null
+  }
+ ]
+}

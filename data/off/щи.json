@@ -1,0 +1,6 @@
+{
+ "query": "щи",
+ "url": "https://search.openfoodfacts.org/search?q=%D1%89%D0%B8+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 0,
+ "products": []
+}

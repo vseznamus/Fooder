@@ -1,0 +1,46 @@
+{
+ "query": "сушки",
+ "url": "https://search.openfoodfacts.org/search?q=%D1%81%D1%83%D1%88%D0%BA%D0%B8+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 10,
+ "products": [
+  {
+   "code": "4600925002255",
+   "name": "Сушки Кроха Ванильные",
+   "brands": "Семейка Озби",
+   "quantity": "200 г",
+   "scans": 1,
+   "kcal": 390,
+   "protein": 11.6,
+   "fat": 1.9,
+   "carbs": 81.6,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "12529254",
+   "name": "Сушки цельнозерновые Алтайские &quot;Льняные&quot;",
+   "brands": null,
+   "quantity": "400г",
+   "scans": 1,
+   "kcal": 260,
+   "protein": 13,
+   "fat": 11,
+   "carbs": 28,
+   "fiber": null,
+   "sugar": 0
+  },
+  {
+   "code": "4600925007311",
+   "name": "Сушки &quot;Кроха&quot; цельнозерновые",
+   "brands": "Озби",
+   "quantity": "200g",
+   "scans": null,
+   "kcal": 400,
+   "protein": 12.4,
+   "fat": 4.7,
+   "carbs": 77,
+   "fiber": 12.7,
+   "sugar": null
+  }
+ ]
+}

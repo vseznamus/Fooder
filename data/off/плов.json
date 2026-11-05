@@ -1,0 +1,59 @@
+{
+ "query": "плов",
+ "url": "https://search.openfoodfacts.org/search?q=%D0%BF%D0%BB%D0%BE%D0%B2+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 12,
+ "products": [
+  {
+   "code": "2100100442408",
+   "name": "Плов с курицей",
+   "brands": "Вкусвилл",
+   "quantity": null,
+   "scans": null,
+   "kcal": 171.7,
+   "protein": 9,
+   "fat": 5.3,
+   "carbs": 22,
+   "fiber": null,
+   "sugar": 2.1
+  },
+  {
+   "code": "4606038088124",
+   "name": "Плов с мясом цыплёнка",
+   "brands": "Гранд Меню",
+   "quantity": null,
+   "scans": null,
+   "kcal": 149,
+   "protein": 7.8,
+   "fat": 4.6,
+   "carbs": 19,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "4630031051106",
+   "name": "Плов мясной",
+   "brands": "Данессия",
+   "quantity": "250г",
+   "scans": null,
+   "kcal": 175,
+   "protein": 10.6,
+   "fat": 5.8,
+   "carbs": 20.1,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "4630053492062",
+   "name": "Плов с курицей",
+   "brands": "Вкусвилл",
+   "quantity": null,
+   "scans": null,
+   "kcal": 189.1,
+   "protein": 11.1,
+   "fat": 6.7,
+   "carbs": 21.1,
+   "fiber": null,
+   "sugar": null
+  }
+ ]
+}

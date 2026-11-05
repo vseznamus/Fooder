@@ -1,0 +1,33 @@
+{
+ "query": "голубцы",
+ "url": "https://search.openfoodfacts.org/search?q=%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D1%86%D1%8B+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 6,
+ "products": [
+  {
+   "code": "2100100729592",
+   "name": "Голубцы ленивые с грибами и брокколи",
+   "brands": "вв",
+   "quantity": null,
+   "scans": null,
+   "kcal": 132,
+   "protein": 10.4,
+   "fat": 6.8,
+   "carbs": 7.3,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "2100100747855",
+   "name": "Голубцы ленивые",
+   "brands": "вв",
+   "quantity": null,
+   "scans": null,
+   "kcal": 134.1,
+   "protein": 8,
+   "fat": 7.3,
+   "carbs": 9.1,
+   "fiber": null,
+   "sugar": null
+  }
+ ]
+}

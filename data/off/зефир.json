@@ -1,0 +1,85 @@
+{
+ "query": "зефир",
+ "url": "https://search.openfoodfacts.org/search?q=%D0%B7%D0%B5%D1%84%D0%B8%D1%80+countries_tags%3A%22en%3Arussia%22&langs=ru&page_size=40&fields=code%2Cproduct_name%2Cproduct_name_ru%2Cbrands%2Cquantity%2Cunique_scans_n%2Cnutriments%2Ccountries_tags&sort_by=-unique_scans_n",
+ "total": 19,
+ "products": [
+  {
+   "code": "64123899",
+   "name": "Зефир с экстрактом каркаде и витаминами со вкусом малины",
+   "brands": "Eco botanica",
+   "quantity": "135 г",
+   "scans": 3,
+   "kcal": 45,
+   "protein": 0.23,
+   "fat": 0,
+   "carbs": 18.3,
+   "fiber": null,
+   "sugar": 0
+  },
+  {
+   "code": "4606038031229",
+   "name": "Зефир",
+   "brands": "Красная Цена",
+   "quantity": "180 г",
+   "scans": 1,
+   "kcal": 326,
+   "protein": 0.8,
+   "fat": 0.4,
+   "carbs": 79.9,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "260300160102000160120011",
+   "name": "Зефир Чёрная смородина",
+   "brands": "Буфет Мясновъ",
+   "quantity": null,
+   "scans": null,
+   "kcal": 312,
+   "protein": 0.5,
+   "fat": 0,
+   "carbs": 81.9,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "4603513005324",
+   "name": "Зефир &quot;Жизель&quot; с ароматом крем-брюле",
+   "brands": "Сокол",
+   "quantity": null,
+   "scans": null,
+   "kcal": 320,
+   "protein": 0.8,
+   "fat": 0,
+   "carbs": 80.4,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "2416233100017",
+   "name": "Зефир &quot;Ассорти&quot; ароматизированный",
+   "brands": "Домашний вкус",
+   "quantity": "155 г",
+   "scans": null,
+   "kcal": 314,
+   "protein": 0.5,
+   "fat": 0,
+   "carbs": 82.4,
+   "fiber": null,
+   "sugar": null
+  },
+  {
+   "code": "4607170053360",
+   "name": "Зефир Капучино",
+   "brands": "Волжские Узоры",
+   "quantity": "180 г",
+   "scans": null,
+   "kcal": 384,
+   "protein": 1.7,
+   "fat": 12.15,
+   "carbs": 69.6,
+   "fiber": null,
+   "sugar": null
+  }
+ ]
+}
