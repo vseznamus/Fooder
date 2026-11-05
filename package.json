@@ -1,0 +1,22 @@
+{
+  "name": "food-suggestions",
+  "version": "0.1.0",
+  "description": "Умные подсказки для дневника питания: локально, на правилах и истории",
+  "main": "dist/src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.3"
+  },
+  "type": "module",
+  "types": "dist/src/index.d.ts",
+  "private": true
+}
