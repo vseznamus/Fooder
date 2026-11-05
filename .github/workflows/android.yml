@@ -3,6 +3,11 @@ name: Android APK
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'data/**'
+      - 'scripts/fetch_sources.py'
+      - '.github/workflows/sources.yml'
+      - '**.md'
   workflow_dispatch:
 
 permissions:
